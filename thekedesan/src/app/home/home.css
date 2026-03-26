@@ -1,0 +1,239 @@
+.hero {
+  /* Replace with the actual path to your image */
+  background-image: url("../../assets/hero-img.jpg");
+
+  /* Standard Hero settings */
+  background-size: cover; /* Scales the image to fill the container */
+  background-position: center; /* Keeps the house centered */
+  background-repeat: no-repeat;
+
+  /* Height is required for the image to show up */
+  height: 100vh; /* Full screen height */
+  width: 100%;
+
+  margin-top: 0;
+  padding-top: 0;
+  /* Flexbox to center any text you put inside later */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* --- Hero Title --- */
+.hero-title {
+  font-family: "Lobster", cursive;
+  font-size: 5rem;
+  color: #ffffff;
+  text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.4); /* Adds depth against the bright image */
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+/* --- The Transparent Booking Box --- */
+.booking-bar {
+  /* 44, 19, 31 is the RGB for #2c131f. 0.6 is 60% opacity */
+  background: rgba(44, 19, 31, 0.6);
+
+  backdrop-filter: blur(
+    10px
+  ); /* Increased blur looks better with lower opacity */
+  -webkit-backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+  padding: 20px 40px;
+  width: 90%;
+  max-width: 900px;
+}
+
+
+/* --- Form Layout --- */
+.booking-form {
+  display: flex;
+  flex-wrap: wrap; /* Allows stacking on mobile */
+  gap: 20px;
+  align-items: flex-end; /* Pushes the Search button down to align with inputs */
+}
+
+.form-group {
+  flex: 1; /* Makes all columns equal width */
+  display: flex;
+  flex-direction: column;
+  min-width: 140px; /* Prevents squishing on tablets */
+}
+
+.form-group label {
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.85rem;
+  margin-bottom: 5px;
+}
+
+/* --- Custom Glass Inputs --- */
+.glass-input {
+  background-color: transparent !important;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 0;
+  color: #ffffff !important;
+  padding: 5px 0;
+}
+
+.glass-input:focus {
+  box-shadow: none;
+  border-bottom: 2px solid #ffffff;
+}
+
+/* Make the dropdown options dark so they are readable when clicked */
+.glass-input option {
+  color: #000000;
+}
+
+/* Make the little calendar icon white instead of black */
+::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  cursor: pointer;
+}
+
+/* --- The Search Button --- */
+.btn-search {
+  background-color: #ffffff; /* The muted blue from your screenshot */
+  color: var(--kedesan-plum);
+  border: none;
+  border-radius: 30px;
+  padding: 10px 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  width: 100%;
+  height: 42px; /* Matches the height of the inputs */
+}
+
+.btn-search:hover {
+  transform: translateY(-2px);
+}
+
+/* --- MOBILE RESPONSIVE FIXES --- */
+
+@media (max-width: 768px) {
+  /* 1. Shrink the title so it doesn't overflow the screen */
+  .hero-title {
+    font-size: 2.8rem;
+    line-height: 1.2;
+    margin-bottom: 30px;
+  }
+
+  /* 2. Adjust the booking bar padding */
+  .booking-bar {
+    padding: 20px;
+    width: 95%;
+  }
+
+  /* 3. Force inputs into a grid/stack */
+  .form-group {
+    /* On medium screens, show 2 per row. On tiny screens, 1 per row */
+    flex: 1 1 calc(50% - 20px);
+    min-width: 120px;
+  }
+
+  /* 4. Make the Search button stand out and take full width on mobile */
+  .btn-container {
+    flex: 1 1 100%;
+    margin-top: 10px;
+  }
+
+  .btn-search {
+    height: 50px; /* Larger touch target for thumbs */
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .form-group {
+    flex: 1 1 100%; /* Total stack on small phones */
+  }
+
+  .hero {
+    /* Adjust height if the keyboard pops up or content gets long */
+    height: auto;
+    min-height: 100vh;
+    padding: 100px 0 50px 0; /* Space for the floating navbar */
+  }
+}
+
+.about .title {
+  font-size: 3.5rem; /* Slightly smaller than hero title */
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+
+.about .description {
+  text-align: left;
+  margin-left: 0; /* Overrides the 'margin: 0 auto' from hero */
+  max-width: 100%; /* Allows it to fill the column width */
+  line-height: 1.8;
+  color: #555; /* Softer grey for body text */
+}
+
+/* Add a subtle "frame" effect to the image if you want it to look premium */
+.image-wrapper {
+  position: relative;
+  padding: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+.abt-img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.image-wrapper.flush-left {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-left: none; /* Removes the left white glass border */
+  padding-left: 0;   /* Pushes the image directly against the screen edge */
+}
+
+/* --- Make the image flush to the left edge --- */
+.flush-left-img {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  width: 100%;
+  object-fit: cover; /* Ensures the image doesn't stretch weirdly */
+
+  /* Optional: Set a min-height so it looks substantial on desktop */
+  min-height: 400px;
+}
+.about .btn-kedesan {
+  padding: 12px 35px;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.room-card {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  height: 100%; /* Ensures all cards in a row are equal height */
+}
+
+.room-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.room-card img {
+  height: 250px;
+  object-fit: cover; /* Prevents room photos from stretching */
+  transition: transform 0.5s ease;
+}
+
+.room-card:hover img {
+  transform: scale(1.05);
+}
