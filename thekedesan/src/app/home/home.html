@@ -74,35 +74,98 @@
 
 <section class="rooms container-fluid py-5 p-0 overflow-hidden">
   <div class="row align-items-center g-0">
-    <div class="col-md-12 px-4 px-lg-5 order-md-1">
-      <h2 class="title text-center mb-4 reveal delay-1">Our Rooms</h2>
-      <p class="description text-center mx-auto mb-4 reveal delay-2">
-        Each of our rooms and suites is thoughtfully curated to provide a truly
-        memorable stay. From cozy queen-size beds to spacious king suites with
-        garden views, our accommodations cater to solo travelers, couples, and
-        families alike. Handicap accessible options are available, ensuring
-        comfort for all guests.
-      </p>
-    </div>
-     <div class="col-md-12 px-4 px-lg-5 order-md-1">
+    <div class="col-md-12 px-4 px-lg-5">
+      <h2 class="title text-white text-center mb-5 reveal delay-1">Our Rooms</h2>
 
-        <div class="row g-4">
-          <div class="col-md-4" *ngFor="let room of rooms">
-            <div class="card room-card glass reveal delay-3">
-              <img
-                [src]="room.images[0]"
-                class="card-img-top"
-                alt="{{ room.name }}"
-              />
-              <div class="card-body">
-                <h5 class="card-title">{{ room.name }}</h5>
-                <p class="card-text">{{ room.description }}</p>
-                <a href="#" class="btn btn-kedesan fw-bold">Book Now</a>
+      <div id="roomCarousel" class="carousel slide reveal delay-2" data-bs-ride="carousel">
+        <div class="carousel-inner">
+
+          <div
+            class="carousel-item"
+            *ngFor="let room of rooms; let i = index"
+            [class.active]="i === 0">
+
+            <div class="card room-card glass mx-auto" style="max-width: 800px;">
+              <div class="row g-0">
+                <div class="col-md-6">
+                  <img
+                    [src]="room.images[0]"
+                    class="img-fluid rounded-start h-200 object-fit-cover"
+                    alt="{{ room.name }}"
+                  />
+                </div>
+
+                <div class="col-md-6">
+                  <div class="card-body d-flex flex-column justify-content-center h-100">
+                    <h5 class="card-title h3">{{ room.name }}</h5>
+
+                    <div class="room-meta my-3">
+                      <p class="mb-1">
+                        <strong>Capacity:</strong> {{ room.capacity }} Guests
+                      </p>
+                      <p class="fs-4 fw-bold">
+                        R{{ room.price }} <span class="fs-6 text-muted">/ night</span>
+                      </p>
+                    </div>
+
+                    <a href="#" class="btn btn-kedesan fw-bold w-100 mt-3">Book Now</a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+
         </div>
 
-     </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#roomCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#roomCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="whyus container-fluid py-5 p-0 overflow-hidden">
+  <div class="row align-items-center g-0">
+
+    <div class="col-md-6 px-4 px-lg-5">
+      <h2 class="title text-center mb-4 reveal delay-1">
+        Why Choose Us?
+      </h2>
+      <ul class="description text-center mx-auto mb-4 reveal delay-2" style="max-width: 500px;">
+    <li class="mb-3">
+      <span class="fw-bold d-block text-uppercase small opacity-75">Location</span>
+      Centrally located with easy access to major universities, hospitals, and entertainment venues.
+    </li>
+    <li class="mb-3">
+      <span class="fw-bold d-block text-uppercase small opacity-75">Comfort</span>
+      Elegant rooms with modern conveniences designed for ultimate relaxation.
+    </li>
+    <li class="mb-3">
+      <span class="fw-bold d-block text-uppercase small opacity-75">Service</span>
+      Personalized services that cater to your individual needs.
+    </li>
+  </ul>
+      <div class="text-center reveal delay-3">
+        <a href="#" class="btn btn-kedesan fw-bold">Our Rooms</a>
+      </div>
+    </div>
+    <div class="col-md-6 mb-4 mb-md-0 pe-md-4">
+      <div class="image-wrapper glass shadow-lg flush-left reveal-left">
+        <div class="zoom-container">
+          <img
+            src="assets/kroom1.jpg"
+            alt="Hotel Room"
+            class="img-fluid abt-img shadow-lg flush-left-img zoom-img"
+          />
+        </div>
+      </div>
+    </div>
   </div>
 </section>

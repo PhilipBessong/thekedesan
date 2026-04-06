@@ -213,19 +213,22 @@
   letter-spacing: 1px;
   text-transform: uppercase;
 }
+.rooms{
+    background-color: var(--kedesan-plum) !important;
+
+}
 .room-card {
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: #f4f2ee;
+  border-style: none;
   height: 100%; /* Ensures all cards in a row are equal height */
 }
 
 .room-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
-  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .room-card img {
@@ -236,4 +239,10 @@
 
 .room-card:hover img {
   transform: scale(1.05);
+}
+
+/* This ensures the icons are pure white */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: brightness(0) invert(1);
 }
