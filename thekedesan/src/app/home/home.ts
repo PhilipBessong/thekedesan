@@ -1,6 +1,6 @@
 import { Component, OnInit, AfterViewInit, PLATFORM_ID, Inject } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
-import {Room, RoomService } from '../service/room-service';
+import {Room,amenities, RoomService } from '../service/room-service';
 import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-home',
@@ -10,7 +10,7 @@ import { CommonModule } from '@angular/common';
 })
 export class Home implements OnInit , AfterViewInit {
   rooms: Room[] = [];
-
+amenitiesList: amenities[] = [];
   constructor(
     private roomService: RoomService,
     @Inject(PLATFORM_ID) private platformId: Object // Needed to avoid errors if using SSR
@@ -24,6 +24,9 @@ export class Home implements OnInit , AfterViewInit {
       if (isPlatformBrowser(this.platformId)) {
         setTimeout(() => this.initObserver(), 200);
       }
+    });
+    this.roomService.getAmenities().subscribe((amenities) => {
+      this.amenitiesList = amenities;
     });
   }
 

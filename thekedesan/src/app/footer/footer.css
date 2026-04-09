@@ -1,0 +1,95 @@
+.footer-section {
+  background-color: var(--kedesan-plum);
+  color: #ffffff;
+  padding-top: 4rem;
+}
+
+.footer-logo {
+  font-family: 'Playfair Display', serif; /* Or your chosen heading font */
+  letter-spacing: 1px;
+}
+
+.footer-heading {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  color: #f4f2ee; /* Slightly off-white */
+}
+
+.footer-text {
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.8;
+}
+
+/* Link Styling */
+.footer-links li {
+  margin-bottom: 12px;
+}
+
+.footer-links a, .footer-legal a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+  padding-left: 8px; /* Subtle slide effect */
+}
+
+/* Contact Icons */
+.footer-contact i {
+  color: #f4f2ee;
+}
+
+/* Social Icons */
+.social-links a {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: white;
+  text-decoration: none;
+  transition: 0.4s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.social-links a:hover {
+  background: #ffffff;
+  color: var(--kedesan-plum);
+  transform: translateY(-5px);
+}
+
+/* Newsletter Input */
+.footer-input {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  border-radius: 5px 0 0 5px;
+}
+
+.footer-input:focus {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  box-shadow: none;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.btn-kedesan-outline {
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  transition: 0.3s;
+}
+
+.btn-kedesan-outline:hover {
+  background: #ffffff;
+  color: var(--kedesan-plum);
+}
+
+.footer-bottom {
+  margin-top: 3rem;
+  background: rgba(0, 0, 0, 0.1); /* Slightly darker bar */
+}

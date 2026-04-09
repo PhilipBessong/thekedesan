@@ -20,6 +20,13 @@ export interface Room {
   features?: RoomFeatures;
   roomtype?: string; // optional: single, double, suite, apartment
 }
+export interface amenities {
+  id: string;
+  name: string;
+  subname: string; // optional: for categorization (e.g., 'sleeping', 'kitchen', etc.)
+  description?: string;
+  image?: string; // URL or icon class for UI representation
+}
 export interface RoomFeatures {
   sleeping: string[]; // Beds, AC, heating, linens
   kitchen: string[]; // Appliances, dining, coffee
@@ -562,11 +569,62 @@ export class RoomService {
     },
   ];
 
+  private amenitiesList: amenities[] = [
+    {
+      id: '1',
+      name: 'Breakfast Service',
+      subname: 'Experience Comfort and Convenience',
+      description: 'At The Kedesan Guest House, we believe that a good day starts with a great breakfast. Our breakfast service offers a variety of delicious options to suit every palate, ensuring you have the energy you need for a productive day. Enjoy a delicious breakfast without leaving the guest house.',
+      image: '/assets/breakfast.jpg',
+    },
+    {
+      id: '2',
+      name: 'Luxury Shuttle Services',
+      subname: 'Experience Comfort and Convenience',
+      description: 'At The Kedesan Guest House, we prioritize your comfort and convenience. Our luxury shuttle service ensures a seamless and relaxing journey to and from the airport. Whether you are arriving or departing, our professional drivers and well-maintained vehicles are here to make your travel experience exceptional.',
+      image: '/assets/drive.jpg',
+    },
+    {
+      id: '3',
+      name: 'Laundry Services',
+      subname: 'Convenient and Reliable',
+      description: 'At The Kedesan Guest House, we offer convenient and reliable laundry services to ensure that your clothes are always fresh and clean during your stay. Whether you need a quick wash or full-service care, our team is here to assist you.',
+      image: '/assets/laundry.jpg',
+    },
+    {
+      id: '4',
+      name: 'Handicap Accessible Services',
+      subname: 'Ensuring Comfort and Convenience for All',
+      description: 'Discover the Accessible Facilities at The Kedesan Huis, where we prioritize comfort and inclusivity for all our guests. At The Kedesan Huis, our accessible features are thoughtfully designed to ensure a seamless and enjoyable experience for everyone. Whether you have specific mobility needs or are seeking a more comfortable stay, our accessible facilities are here to meet your needs.',
+      image: '/assets/handicap.jpg',
+    },
+    {
+      id: '5',
+      name: 'Shopping Services',
+      subname: 'Convenient and Hassle-Free',
+      description: 'At The Kedesan Guest House, we aim to make your stay as comfortable and convenient as possible. Our grocery shopping service is designed to save you time and effort, ensuring you have all the essentials you need without having to leave the comfort of the guest house.',
+      image: '/assets/shopping.jpg',
+    },
+    {
+      id: '6',
+      name: 'Smoking Area',
+      subname: 'A Comfortable Space for Smokers',
+      description: 'At The Kedesan Guest House, we understand the needs of all our guests. Our designated outside smoking area offers a comfortable and peaceful space for smokers to relax and unwind.',
+      image: '/assets/smoking.jpg',
+    }
+  ];
+
   getRooms(): Observable<Room[]> {
     return of(this.rooms);
 
   }
   getRoomById(id: string): Room | undefined {
     return this.rooms.find((room) => room.id === id);
+  }
+  getAmenities(): Observable<amenities[]> {
+    return of(this.amenitiesList);
+  }
+  getAmenityById(id: string): amenities | undefined {
+    return this.amenitiesList.find((amenity) => amenity.id === id);
   }
 }
