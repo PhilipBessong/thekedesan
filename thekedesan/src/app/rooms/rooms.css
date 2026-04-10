@@ -1,0 +1,127 @@
+/* Existing Hero Section Styles */
+.rooms-section {
+  /* Replace with the actual path to your image */
+  background-image: url("../../assets/rooms-section-image.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  margin-top: 0;
+  padding-top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.hero-title {
+  font-family: "Lobster", cursive;
+  font-size: 5rem;
+  color: #ffffff;
+  text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.4); /* Adds depth against the bright image */
+  margin-bottom: 50px;
+  text-align: center;
+}
+/* 1. The Glass Effect Utility */
+.glass {
+  /* Semi-transparent background */
+  /* The "Frosted" blur effect */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  /* Subtle white border to catch the light */
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* 2. Room Card Base (Adjusted for 4-across) */
+.room-card {
+  overflow: hidden;
+  transition: all 0.4s ease;
+  padding: 1px; /* Slight padding inside the glass frame */
+}
+
+.room-card .card-title {
+    font-family: "Montserrat", sans-serif;
+  color: #ffffff;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+  margin-top: 15px;
+}
+
+/* 3. Image Styling */
+.room-card img.room-image {
+  height: 330px; /* Shorter height to keep 4-in-a-row compact */
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.room-image-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+/* The Info Overlay (Hidden by default) */
+.room-info-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Darkens image so text pops */
+  backdrop-filter: blur(8px); /* Glass effect on the slide-up */
+  color: white;
+  padding: 20px;
+
+  /* The Slide Up Logic */
+  transform: translateY(100%);
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Hover State: Slide it up */
+.room-card:hover .room-info-overlay {
+  transform: translateY(0);
+}
+
+/* Pricing Style */
+.price-tag {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #fff;
+}
+
+.price-tag small {
+  font-size: 0.8rem;
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+/* Amenities List Style */
+.amenities-list li {
+  font-size: 0.85rem;
+  margin-bottom: 5px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+.room-card:hover .card-title {
+  color: var(--kedesan-plum);
+  font-weight: 600;
+}
+
+/* Image zoom tweak */
+.room-card:hover .room-image {
+  transform: scale(1.1); /* Zoom in slightly as the text slides up */
+}
+
+/* 5. Responsive Tweaks */
+@media (max-width: 991px) {
+  .room-card img.room-image {
+    height: 250px; /* Taller images when 2-across */
+  }
+}
+
+@media (max-width: 767px) {
+  .room-card img.room-image {
+    height: 300px; /* Standard height for mobile */
+  }
+}

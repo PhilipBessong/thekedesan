@@ -1,0 +1,29 @@
+<section class="rooms-section d-flex align-items-center justify-content-center">
+  <h1 class="hero-title reveal active">Our Rooms</h1>
+</section>
+
+<section class="rooms-gallery container py-5 reveal delay-1 active">
+  <div class="row g-4">
+    <div class="col-12 col-md-6 col-lg-3" *ngFor="let room of rooms">
+      <div class="card room-card glass h-100">
+
+        <div class="room-image-wrapper">
+          <img [src]="room.images[0]" class="card-img-top img-fluid room-image" alt="{{ room.name }}" />
+
+          <div class="room-info-overlay d-flex flex-column justify-content-center align-items-center">
+            <div class="price-tag mb-2">R {{ room.price }} <small>/night</small></div>
+            <ul class="amenities-list list-unstyled text-center">
+              <li *ngFor="let item of room.amenities | slice:0:3">
+                <i class="bi bi-check2-circle me-1"></i> {{ item }}
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card-body d-flex flex-column justify-content-center">
+          <h3 class="card-title text-center">{{ room.name }}</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
