@@ -1,0 +1,224 @@
+/* Existing Hero Section Styles */
+.about-section {
+  /* Replace with the actual path to your image */
+  background-image: url("../../assets/service-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  margin-top: 0;
+  padding-top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.hero-title {
+  font-family: "Lobster", cursive;
+  font-size: 5rem;
+  color: #ffffff;
+  text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.4); /* Adds depth against the bright image */
+  margin-bottom: 50px;
+  text-align: center;
+}
+/* --- MOBILE RESPONSIVE FIXES --- */
+
+@media (max-width: 768px) {
+  /* 1. Shrink the title so it doesn't overflow the screen */
+  .hero-title {
+    font-size: 2.8rem;
+    line-height: 1.2;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2.2rem;
+  }
+  .hero {
+    /* Adjust height if the keyboard pops up or content gets long */
+    height: auto;
+    min-height: 100vh;
+    padding: 100px 0 50px 0; /* Space for the floating navbar */
+  }
+}
+.about .title {
+  font-size: 3.5rem; /* Slightly smaller than hero title */
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+
+.about .description {
+  text-align: left;
+  margin-left: 0; /* Overrides the 'margin: 0 auto' from hero */
+  max-width: 100%; /* Allows it to fill the column width */
+  line-height: 1.8;
+  color: #555; /* Softer grey for body text */
+}
+
+/* Add a subtle "frame" effect to the image if you want it to look premium */
+.image-wrapper {
+  position: relative;
+  padding: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+.abt-img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.image-wrapper.flush-left {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-left: none; /* Removes the left white glass border */
+  padding-left: 0;   /* Pushes the image directly against the screen edge */
+}
+
+/* --- Make the image flush to the left edge --- */
+.flush-left-img {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  width: 100%;
+  object-fit: cover; /* Ensures the image doesn't stretch weirdly */
+
+  /* Optional: Set a min-height so it looks substantial on desktop */
+  min-height: 400px;
+}
+.about .btn-kedesan {
+  padding: 12px 35px;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.zoom-container {
+  overflow: hidden;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+/* Forces all carousel images to the same height */
+.carousel-inner .abt-img {
+  width: 100%;
+  height: 500px; /* Adjust this value to your preferred desktop height */
+  object-fit: cover; /* This crops the image to fill the space without stretching */
+  object-position: center;
+}
+
+/* Responsive adjustment for mobile */
+@media (max-width: 768px) {
+  .carousel-inner .abt-img {
+    height: 350px; /* Slightly shorter on smaller screens */
+  }
+}
+/* The Animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    /* Moves half the width (the first full set of items) before snapping back */
+    transform: translateX(-50%);
+  }
+}
+/* Container hides the overflow */
+.slider-container {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+/* The track that actually moves */
+.slider-track {
+  display: flex;
+  /* Adjust the timing (40s) to speed up or slow down */
+  animation: scroll 40s linear infinite;
+  /* Width must be enough to hold both sets of items */
+  width: calc(200%);
+}
+
+/* Pause animation on hover for better UX */
+.slider-track:hover {
+  animation-play-state: paused;
+}
+
+/* Each item takes up 1/3 of the visible container (33.33%) */
+.amenity-item {
+  flex: 0 0 calc(100% / 6); /* Divide by 6 because we doubled the list for 3 items per view */
+  padding: 0 15px; /* Spacing between cards */
+  box-sizing: border-box;
+}
+
+/* The Animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    /* Moves half the width (the first full set of items) before snapping back */
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive: Show 1 or 2 items on smaller screens */
+@media (max-width: 992px) {
+  .amenity-item {
+    flex: 0 0 calc(100% / 4); /* 2 items visible (list doubled = 4) */
+  }
+}
+
+@media (max-width: 576px) {
+  .amenity-item {
+    flex: 0 0 calc(100% / 2); /* 1 item visible (list doubled = 2) */
+  }
+}
+.amenities {
+  text-align: center;
+    background-image: url("../../assets/service-bg.png");
+}
+/* Target the image specifically within the amenity card */
+.amenity-card .card-img-top {
+  height: 250px; /* Set your desired fixed height */
+  width: 100%;
+  object-fit: cover; /* This crops the image to fill the area without distortion */
+  display: block;
+}
+
+/* Optional: Ensure the card has a consistent structure if text length varies */
+.amenity-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Keeps the image corners rounded with the card */
+  font-weight: 600;
+  border-radius: 25px;
+border: none;
+  /* Smoothly transition the transform and the shadow */
+  transition: transform 0.5s cubic-bezier(0.2, 1, 0.3, 1),
+              box-shadow 0.5s cubic-bezier(0.2, 1, 0.3, 1);
+
+  /* Improves performance by telling the browser to expect movement */
+  will-change: transform;
+}
+.amenity-card .room-image {
+  /* ... your existing styles ... */
+
+  /* Slightly slower duration on the image makes it feel like it has "weight" */
+  transition: transform 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+}
+.amenity-card .card-body {
+  flex-grow: 1; /* Ensures the body fills the remaining space */
+}
+/* 3. The Hover State */
+.amenity-card:hover {
+  /* Subtle lift */
+  transform: translateY(-10px);
+
+  /* Adding a deeper shadow on hover makes the "lift" feel real */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.amenity-card:hover .room-image {
+  /* Scale is kept subtle to avoid blurriness */
+  transform: scale(1.05);
+}

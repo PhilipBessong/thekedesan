@@ -1,0 +1,10 @@
+.amenities {
+
+  padding-top: 140px; /* Matches the hero section's padding for visual consistency */
+}
+.amenities .title {
+  font-size: 3.5rem; /* Slightly smaller than hero title */
+  text-align: left;
+  color: var(--kedesan-plum);
+  margin-bottom: 1.5rem;
+}

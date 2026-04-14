@@ -1,52 +1,21 @@
-/* Existing Hero Section Styles */
-.rooms-section {
-  /* Replace with the actual path to your image */
-  background-image: url("../../assets/rooms-section-image.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100vh;
-  width: 100%;
-  margin-top: 0;
-  padding-top: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.amenities {
+
+  padding-top: 140px; /* Matches the hero section's padding for visual consistency */
 }
-.hero-title {
-  font-family: "Lobster", cursive;
-  font-size: 5rem;
-  color: #ffffff;
-  text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.4); /* Adds depth against the bright image */
-  margin-bottom: 50px;
-  text-align: center;
+.amenities .title {
+  font-size: 3.5rem; /* Slightly smaller than hero title */
+  text-align: left;
+  color: var(--kedesan-plum);
+  margin-bottom: 1.5rem;
 }
 
-/* --- MOBILE RESPONSIVE FIXES --- */
-
-@media (max-width: 768px) {
-  /* 1. Shrink the title so it doesn't overflow the screen */
-  .hero-title {
-    font-size: 2.8rem;
-    line-height: 1.2;
-    margin-bottom: 30px;
-  }
+.amenities .description {
+  text-align: left;
+  margin-left: 0; /* Overrides the 'margin: 0 auto' from hero */
+  max-width: 100%; /* Allows it to fill the column width */
+  line-height: 1.8;
+  color: #555; /* Softer grey for body text */
 }
-
-@media (max-width: 480px) {
-  .hero-title {
-    font-size: 2.2rem;
-  }
-  .hero {
-    /* Adjust height if the keyboard pops up or content gets long */
-    height: auto;
-    min-height: 100vh;
-    padding: 100px 0 50px 0; /* Space for the floating navbar */
-  }
-}
-
-/* 1. The Glass Effect Utility */
 .glass {
   /* Semi-transparent background */
   /* The "Frosted" blur effect */
@@ -73,7 +42,7 @@
 
 /* 3. Image Styling */
 .room-card img.room-image {
-  height: 330px; /* Shorter height to keep 4-in-a-row compact */
+  height: 400px; /* Shorter height to keep 4-in-a-row compact */
   width: 100%;
   object-fit: cover;
   transition: transform 0.5s ease;

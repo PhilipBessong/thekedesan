@@ -1,0 +1,143 @@
+<section class="about-section d-flex align-items-center justify-content-center">
+  <h1 class="hero-title active">About The Kedesan Huis</h1>
+</section>
+<section class="about delay-1 active container-fluid py-5 p-0 overflow-hidden">
+  <div class="row align-items-center g-0">
+    <div class="col-md-6 mb-4 mb-md-0 pe-md-4">
+      <div class="image-wrapper glass shadow-lg flush-left -left">
+        <div class="zoom-container">
+          <img
+            src="assets/rooms.jpg"
+            alt="Hotel Room"
+            class="img-fluid abt-img shadow-lg flush-left-img zoom-img"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 px-4 px-lg-5">
+      <h2 class="title text-center mb-4 delay-1">About Us</h2>
+      <p class="description text-center mx-auto mb-4 delay-2">
+        Welcome to The <b>Kedesan Huis</b>, where comfort and tranquility
+        intertwine to offer you an unforgettable stay in the heart of
+        Johannesburg. Nestled amidst exquisite perennial gardens, Kedesan
+        provides a serene retreat tailored for both relaxation and convenience.
+        Whether you’re visiting for a brief escape or a longer journey, our
+        beautifully furnished accommodations and attention to detail ensure a
+        stay filled with cherished memories.
+      </p>
+   <div class="text-center delay-3 d-flex justify-content-center gap-3">
+  <a href="#" class="btn btn-kedesan fw-bold">View Rooms</a>
+  <a href="#" class="btn btn-kedesan fw-bold">Get Directions</a>
+</div>
+    </div>
+  </div>
+</section>
+
+<section class="whyus delay-1 active container-fluid py-5 p-0 overflow-hidden">
+  <div class="row align-items-center g-0">
+    <h2 class="title text-center mb-4 delay-1">
+      A Serene Haven in Johannesburg
+    </h2>
+    <div class="col-md-6 px-4 px-lg-5">
+      <p class="description text-center mx-auto mb-4 delay-2">
+        <b>Comfort and Elegance:</b> At The Kedesan Huis, we take pride in
+        offering accommodations that combine elegance with homely warmth. Each
+        room is a sanctuary, blending sophisticated design with comfort. Our
+        rooms are meticulously designed with hand-selected luxury fabrics and
+        antique furnishings, ensuring a unique and delightful stay. From plush
+        bedding to thoughtful amenities, every detail is crafted to provide a
+        restful and rejuvenating experience.
+      </p>
+      <p class="description text-center mx-auto mb-4 delay-2">
+        <b>Exceptional Service:</b> The Kedesan Huis is dedicated to delivering
+        outstanding service. Our professional staff is committed to ensuring
+        your stay is seamless and enjoyable. From the moment you arrive, you
+        will experience a warm welcome and attentive care. Our concierge team is
+        available to assist with local recommendations, transportation
+        arrangements, and any special requests you may have, making sure every
+        aspect of your visit exceeds expectations..
+      </p>
+    </div>
+    <div class="col-md-6 mb-4 mb-md-0 pe-md-4">
+      <div class="image-wrapper glass shadow-lg flush-left -left">
+        <div class="zoom-container">
+          <div
+            id="aboutCarousel"
+            class="carousel slide carousel-fade"
+            data-bs-ride="carousel"
+            data-bs-interval="3000"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="assets/abcaroimg2.jpg"
+                  alt="Hotel Room 1"
+                  class="img-fluid abt-img shadow-lg flush-left-img zoom-img"
+                />
+              </div>
+
+              <div class="carousel-item">
+                <img
+                  src="assets/abcaroimg1.jpg"
+                  alt="Hotel Room 2"
+                  class="img-fluid abt-img shadow-lg flush-left-img zoom-img"
+                />
+              </div>
+
+              <div class="carousel-item">
+                <img
+                  src="assets/proom2.jpg"
+                  alt="Hotel Room 3"
+                  class="img-fluid abt-img shadow-lg flush-left-img zoom-img"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<pre><pre><pre></pre></pre></pre>
+        <h2 class="title text-center mb-4 delay-1">Your Comfort, Our Priority!</h2>
+
+<section
+  class="amenities delay-1 active container-fluid py-5 p-0 overflow-hidden"
+>
+  <div class="row align-items-center g-0">
+    <div class="col-md-12">
+      <div class="slider-container">
+        <div class="slider-track">
+          <div class="amenity-item" *ngFor="let amenity of amenitiesList">
+            <div class="card amenity-card glass h-100">
+              <img
+                [src]="amenity.image"
+                class="card-img-top img-fluid"
+                alt="{{ amenity.name }}"
+              />
+              <div class="card-body d-flex flex-column justify-content-center">
+                <h5 class="card-title text-white h3">{{ amenity.name }}</h5>
+                <p class="card-text text-white">{{ amenity.subname }}</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="amenity-item" *ngFor="let amenity of amenitiesList">
+            <div class="card amenity-card glass h-100">
+              <img
+                [src]="amenity.image"
+                class="card-img-top img-fluid"
+                alt="{{ amenity.name }}"
+              />
+              <div class="card-body d-flex flex-column justify-content-center">
+                <h5 class="card-title text-white h3">{{ amenity.name }}</h5>
+                <p class="card-text text-white">{{ amenity.subname }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
