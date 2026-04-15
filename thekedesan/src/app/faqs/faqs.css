@@ -8,3 +8,54 @@
   color: var(--kedesan-plum);
   margin-bottom: 1.5rem;
 }
+/* 1. Bold and Center the Questions */
+.glass-button {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  color: #fff !important;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1.25rem;
+  border: none !important; /* Remove internal button border */
+  box-shadow: none !important; /* Remove Bootstrap blue glow on click */
+}
+
+.glass-button:not(.collapsed) {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+/* 2. Center the Answer Content */
+.glass-content {
+  text-align: center;
+  color: #fff;
+}
+
+/* 3. Make Dropdown Arrows White */
+.accordion-button::after {
+  filter: brightness(0) invert(1);
+  position: absolute;
+  right: 1.25rem;
+  margin-left: 0;
+}
+/* General Accordion Styling */
+.accordion {
+  border: none !important;
+  background: transparent !important;
+}
+.accordion-button {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+/* 2. The Item: Ensure each item is a distinct "island" */
+.accordion-item {
+  margin-bottom: 1.5rem !important; /* Space between the items */
+  border-radius: 12px !important;    /* Forces rounded corners on every item */
+  overflow: hidden;                 /* Prevents internal button from bleeding over corners */
+  background: var(--kedesan-plum);
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Optional: adds depth */
+}
