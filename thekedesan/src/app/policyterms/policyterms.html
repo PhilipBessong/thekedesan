@@ -1,0 +1,37 @@
+<section class="policyterms d-flex align-items-center justify-content-center">
+  <div class="row align-items-center g-0">
+    <div class="col-md-12 mb-4 mb-md-0">
+      <h1 class="title text-center mb-4">Our Policy & Terms</h1>
+      <p class="description text-center">Please read our policy and terms of service carefully before using our website or services.</p>
+    </div>
+  </div>
+
+</section>
+<section class="policyterms-section container py-5 reveal delay-1 active">
+<div class="accordion" id="policyAccordion">
+    <div class="accordion-item mb-3 border-0" *ngFor="let policy of policiesList; let i = index">
+
+      <h2 class="accordion-header" [id]="'policyHeading' + i">
+        <button
+          class="accordion-button collapsed glass-button"
+          type="button"
+          data-bs-toggle="collapse"
+          [attr.data-bs-target]="'#policyCollapse' + i"
+          aria-expanded="false"
+          [attr.aria-controls]="'policyCollapse' + i">
+          {{ policy.title }}
+        </button>
+      </h2>
+
+      <div
+        [id]="'policyCollapse' + i"
+        class="accordion-collapse collapse"
+        [attr.aria-labelledby]="'policyHeading' + i"
+        data-bs-parent="#policyAccordion">
+        <div class="accordion-body glass-content text-white" [innerHTML]="policy.content">
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

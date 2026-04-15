@@ -1,13 +1,24 @@
-.faqs {
+.policyterms {
   padding-top: 140px; /* Matches the hero section's padding for visual consistency */
 }
-.faqs .title {
+.policyterms .title {
   font-size: 3.5rem; /* Slightly smaller than hero title */
   text-align: left;
   color: var(--kedesan-plum);
   margin-bottom: 1.5rem;
 }
-/* 1. Bold and Center the Questions */
+/* Keeps the Policy text readable but maintains the glass look */
+#policyAccordion .glass-content {
+  text-align: left; /* Legal text is usually better left-aligned */
+  padding: 2rem;
+  line-height: 1.6;
+}
+
+/* Ensure the title and description are white if they aren't already */
+.policy-section .title,
+.policy-section .description {
+  color: #fff;
+}
 .glass-button {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
@@ -58,3 +69,4 @@
   border: 1px solid rgba(255, 255, 255, 0.2) !important;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Optional: adds depth */
 }
+
