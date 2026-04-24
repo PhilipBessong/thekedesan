@@ -1,0 +1,61 @@
+<div class="details-container" *ngIf="amenity; else notFound">
+  <header class="amenity-hero" [style.background-image]="'url(' + (amenity.image || 'assets/default-amenity.jpg') + ')'">
+    <div class="hero-overlay d-flex align-items-center">
+      <div class="container text-center">
+        <span class="category-badge mb-2 d-inline-block">{{ amenity.subname | uppercase }}</span>
+        <h1 class="display-3 amenity-name">{{ amenity.name }}</h1>
+      </div>
+    </div>
+  </header>
+
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-lg-8">
+        <section class="mb-5">
+          <div class="d-flex align-items-center mb-4">
+             <div class="icon-circle me-3">
+                <i class="bi bi-stars fs-3 text-white"></i>
+             </div>
+             <h2 class="mb-0">About this Service</h2>
+          </div>
+
+          <p class="lead text-muted lh-lg">
+            {{ amenity.description || 'We pride ourselves on offering top-tier amenities to ensure your stay is as comfortable and seamless as possible.' }}
+          </p>
+
+          <div class="row g-3 mt-4">
+            <div class="col-md-6">
+              <div class="feature-box glass p-4">
+                <h5><i class="bi bi-info-circle me-2"></i> Availability</h5>
+                <p class="mb-0 text-muted">Available to all guests staying in our {{ amenity.subname }} suites.</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="feature-box glass p-4">
+                <h5><i class="bi bi-shield-check me-2"></i> Quality Standard</h5>
+                <p class="mb-0 text-muted">Regularly maintained and inspected for your safety and comfort.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="action-card glass p-4 sticky-top" style="top: 100px;">
+          <h4 class="mb-3">Interested?</h4>
+          <p class="small text-muted mb-4">This amenity is included in most of our premium bookings. Explore our rooms to see which ones offer this feature.</p>
+          <hr class="border-light">
+          <button routerLink="/rooms" class="btn btn-kedesan w-100 btn-lg mb-3">View Rooms</button>
+          <a class="btn btn-outline-dark w-100" href="https://wa.me/+27695022405" target="_blank" >Contact Reception</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #notFound>
+  <div class="container py-5 text-center">
+    <h2 class="text-white">Amenity details not found.</h2>
+    <a routerLink="/rooms" class="btn btn-kedesan mt-3">Back to Gallery</a>
+  </div>
+</ng-template>

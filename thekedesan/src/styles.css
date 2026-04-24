@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@300;400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@300;400;600&display=swap");
 
 /* --- Brand Colors --- */
 :root {
@@ -10,8 +10,9 @@ body {
   padding: 0;
   height: 100%;
 }
+
 .title {
- font-family: 'Lobster', cursive;
+  font-family: "Lobster", cursive;
   font-size: 4.5rem; /* Sized up slightly for impact */
   color: #000000;
   line-height: 1.1;
@@ -19,7 +20,7 @@ body {
   margin-bottom: 20px;
 }
 .description {
-  font-family: 'Montserrat', sans-serif !important;
+  font-family: "Montserrat", sans-serif !important;
   font-weight: 400;
   font-size: 1.1rem;
   line-height: 1.8;
@@ -33,7 +34,6 @@ body {
 
   /* Added some breathing room at the top */
   padding: 0 20px;
-
 }
 /* --- Brand Button (Plum & White) --- */
 .btn-kedesan {
@@ -68,9 +68,15 @@ body {
 }
 
 /* Staggered Delays for that "Waterfall" effect */
-.delay-1 { transition-delay: 0.1s; }
-.delay-2 { transition-delay: 0.3s; }
-.delay-3 { transition-delay: 0.5s; }
+.delay-1 {
+  transition-delay: 0.1s;
+}
+.delay-2 {
+  transition-delay: 0.3s;
+}
+.delay-3 {
+  transition-delay: 0.5s;
+}
 
 /* Horizontal Reveal (Optional for titles) */
 .reveal-left {
@@ -86,11 +92,20 @@ body {
 
 /* --- Special Shine Effect for Glass --- */
 @keyframes glass-shine {
-  0% { left: -100%; }
-  100% { left: 100%; }
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
 }
 .glass {
- /* 1. Use a gradient instead of a solid color to simulate light hitting the surface */
+  /* 1. Force border-box for this element */
+  box-sizing: border-box;
+
+  /* 2. Ensure it's the anchor for the shine effect (the ::after) */
+  position: relative;
+  overflow: hidden;
   background: linear-gradient(
     135deg,
     rgba(255, 255, 255, 0.3) 0%,
@@ -110,16 +125,17 @@ body {
 
   /* 4. Layered Box Shadows for depth */
   box-shadow:
-    0 4px 15px rgba(0, 0, 0, 0.05), /* Soft floor shadow */
-    0 10px 30px rgba(44, 19, 31, 0.1), /* Glow shadow matching your plum color */
-    inset 0 0 0 1px rgba(255, 255, 255, 0.2); /* Inner subtle shine */
+    0 4px 15px rgba(0, 0, 0, 0.05),
+    /* Soft floor shadow */ 0 10px 30px rgba(44, 19, 31, 0.1),
+    /* Glow shadow matching your plum color */ inset 0 0 0 1px
+      rgba(255, 255, 255, 0.2); /* Inner subtle shine */
 }
 .glass::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;
-  width: 50%;
+  width: 100%;
   height: 100%;
   background: linear-gradient(
     to right,
@@ -139,7 +155,9 @@ body {
 
 /* --- The Image Initial State --- */
 .zoom-img {
-  transition: transform 1.2s ease-out, filter 1.2s ease-out !important; /* Slow, smooth expand */
+  transition:
+    transform 1.2s ease-out,
+    filter 1.2s ease-out !important; /* Slow, smooth expand */
   transform-origin: center; /* Zooms from the middle */
   will-change: transform; /* Helps browser performance */
 }
@@ -147,8 +165,6 @@ body {
 /* --- The Hover State --- */
 .image-wrapper:hover .zoom-img {
   /* Scale up by 15% and subtly brighten the image */
-  transform: scale(1.10) !important;
+  transform: scale(1.1) !important;
   filter: brightness(1.1); /* Makes the image "pop" when hovered */
 }
-
-

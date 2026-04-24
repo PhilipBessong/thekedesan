@@ -1,0 +1,35 @@
+<section class="tour-section py-5 d-flex align-items-center">
+  <div class="container">
+
+    <div class="text-center mb-5 text-white">
+      <h1 class="display-4 font-lobster">Kedesan Huis 3D Tour</h1>
+      <p class="lead text-white-50">Step inside and explore our spaces before you arrive.</p>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-12 col-xl-10">
+
+        <div class="glass p-2 p-md-4 rounded-4">
+          <div class="iframe-wrapper rounded-3 overflow-hidden shadow-lg">
+            <iframe
+              [src]="safeTourUrl"
+              frameborder="0"
+              allowfullscreen
+              allow="xr-spatial-tracking"
+              class="matterport-iframe">
+            </iframe>
+          </div>
+        </div>
+
+        <div class="text-center mt-5">
+           <p class="text-white mb-3">Ready to experience it in person?</p>
+           <button routerLink="/rooms" class="btn btn-kedesan px-5 py-3 fw-bold fs-5 shadow">
+             View Available Rooms
+           </button>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>

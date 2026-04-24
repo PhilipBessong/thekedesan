@@ -1,9 +1,10 @@
 import { Component, OnInit, AfterViewInit, PLATFORM_ID, Inject } from '@angular/core';
 import { isPlatformBrowser, NgFor } from '@angular/common';
 import {amenities, RoomService } from '../service/room-service';import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 @Component({
   selector: 'app-aboutus',
-  imports: [CommonModule,NgFor],
+  imports: [CommonModule,NgFor, RouterModule],
   templateUrl: './aboutus.html',
   styleUrl: './aboutus.css',
 })
@@ -49,4 +50,9 @@ amenitiesList: amenities[] = [];
       observer.observe(el);
     });
   }
+openDirections() {
+  const destinationId = 'place_id:ChIJXfdN_esLlR4Rk7cIpFbtkUk';
+  const url = `https://www.google.com/maps/dir/?api=1&destination=35+Ripley+Rd+Rossmore+Johannesburg&destination_place_id=${destinationId.replace('place_id:', '')}`;
+  window.open(url, '_blank');
+}
 }

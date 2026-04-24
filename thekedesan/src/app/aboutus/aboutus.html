@@ -26,10 +26,16 @@
         beautifully furnished accommodations and attention to detail ensure a
         stay filled with cherished memories.
       </p>
-   <div class="text-center delay-3 d-flex justify-content-center gap-3">
-  <a href="#" class="btn btn-kedesan fw-bold">View Rooms</a>
-  <a href="#" class="btn btn-kedesan fw-bold">Get Directions</a>
-</div>
+      <div class="text-center delay-3 d-flex justify-content-center gap-3">
+        <a href="/rooms" class="btn btn-kedesan fw-bold">View Rooms</a>
+        <a
+          (click)="openDirections()"
+          class="btn btn-kedesan fw-bold"
+          style="cursor: pointer"
+        >
+          Get Directions
+        </a>
+      </div>
     </div>
   </div>
 </section>
@@ -100,7 +106,7 @@
   </div>
 </section>
 <pre><pre><pre></pre></pre></pre>
-        <h2 class="title text-center mb-4 delay-1">Your Comfort, Our Priority!</h2>
+<h2 class="title text-center mb-4 delay-1">Your Comfort, Our Priority!</h2>
 
 <section
   class="amenities delay-1 active container-fluid py-5 p-0 overflow-hidden"
@@ -110,7 +116,10 @@
       <div class="slider-container">
         <div class="slider-track">
           <div class="amenity-item" *ngFor="let amenity of amenitiesList">
-            <div class="card amenity-card glass h-100">
+            <div
+              class="card amenity-card glass h-100"
+              [routerLink]="['/amenities', amenity.id]"
+            >
               <img
                 [src]="amenity.image"
                 class="card-img-top img-fluid"

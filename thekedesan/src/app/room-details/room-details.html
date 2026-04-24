@@ -1,0 +1,70 @@
+<div class="details-container" *ngIf="room; else notFound">
+  <header class="room-hero" [style.background-image]="'url(' + room.images[0] + ')'">
+    <div class="hero-overlay d-flex align-items-center">
+      <div class="container">
+        <h1 class="display-3 room-name">{{ room.name }}</h1>
+        <p class="text-white-50 fs-4">{{ room.roomtype | titlecase }} Suite</p>
+      </div>
+    </div>
+  </header>
+
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-lg-8">
+        <section class="mb-5">
+          <h2 class="mb-4">Description</h2>
+          <p class="lead text-muted">{{ room.description || 'Experience luxury and comfort in our finely appointed rooms.' }}</p>
+
+          <div class="row g-3 mt-4">
+            <div class="col-6 col-md-3">
+              <div class="feature-box glass p-3 text-center">
+                <i class="bi bi-people fs-2"></i>
+                <p class="mb-0">Cap: {{ room.capacity }}</p>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="feature-box glass p-3 text-center">
+                <i class="bi bi-door-open fs-2"></i>
+                <p class="mb-0">{{ room.bedNum }} Beds</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="mb-5" *ngIf="room.features">
+          <h2 class="mb-4">What this room offers</h2>
+          <div class="row">
+            <div class="col-md-6 mb-3" *ngIf="room.features.tech.length">
+              <h5><i class="bi bi-cpu me-2"></i>Technology</h5>
+              <ul class="list-unstyled">
+                <li *ngFor="let tech of room.features.tech">✓ {{ tech }}</li>
+              </ul>
+            </div>
+            <div class="col-md-6 mb-3" *ngIf="room.features.kitchen.length">
+              <h5><i class="bi bi-egg-fried me-2"></i>Kitchen</h5>
+              <ul class="list-unstyled">
+                <li *ngFor="let k of room.features.kitchen">✓ {{ k }}</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="booking-card glass p-4 sticky-top" style="top: 100px;">
+          <h3 class="price-text">R {{ room.price }} <small class="text-muted">/ night</small></h3>
+          <hr>
+          <button class="btn btn-kedesan w-100 btn-lg mb-3">Book This Room</button>
+          <p class="text-center small text-muted">No credit card required today</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #notFound>
+  <div class="container py-5 text-center">
+    <h2>Room not found.</h2>
+    <a routerLink="/rooms" class="btn btn-primary">Back to Gallery</a>
+  </div>
+</ng-template>

@@ -2,9 +2,10 @@ import { Component, OnInit, AfterViewInit, PLATFORM_ID, Inject } from '@angular/
 import { isPlatformBrowser } from '@angular/common';
 import {Room,amenities, RoomService } from '../service/room-service';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 @Component({
   selector: 'app-home',
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })

@@ -1,0 +1,47 @@
+.room-hero {
+  height: 80vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.7)
+  );
+}
+
+.feature-box {
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.price-text {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: var(--kedesan-plum);
+}
+
+/* Matching your existing glass effect */
+.glass {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+}
+
+.room-name {
+  font-family: "Lobster", cursive;
+  font-size: 5rem;
+  color: #ffffff;
+  text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.4); /* Adds depth against the bright image */
+  margin-bottom: 50px;
+  text-align: center;
+}

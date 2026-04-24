@@ -6,7 +6,7 @@ import {Room,amenities, RoomService } from '../service/room-service';
 
 @Component({
   selector: 'app-rooms',
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './rooms.html',
   styleUrl: './rooms.css',
 })
@@ -15,6 +15,7 @@ export class Rooms  implements OnInit , AfterViewInit {
 amenitiesList: amenities[] = [];
   constructor(
     private roomService: RoomService,
+
     @Inject(PLATFORM_ID) private platformId: Object // Needed to avoid errors if using SSR
   ) {}
 
