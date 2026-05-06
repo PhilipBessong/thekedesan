@@ -88,7 +88,7 @@ export class RoomService {
         '/assets/dezy4.jpg',
       ],
       description:
-        'This is an exclusive, spacious, serene room; with a queen, comfortable bed for total occupancy of two. You have a writing desk, ergonomic chair, and high speed internet to support your business activities, or stay in contact with family and friends while on the move. You can follow current affairs, and business news, or just relax with the DSTV Compact bouquet. For your exclusive use, there are heat-and-eat facilities - fridge, microwave, electric kettle; with mugs, cutlery, and plates to go with. There is complimentary tea and coffee, and  prepared water.',
+        'Room Dezy offers a cozy, comfortable retreat with a queen-size bed and a reach-in closet. It features an ensuite bathroom with free toiletries, a separate sitting area, a kitchenette with a microwave, tea/coffee accessories, and a special daily surprise. Enjoy a full view of the garden and plenty of sunlight for a perfect morning coffee.',
       features: {
         sleeping: [
           'One queen bed with cotton linens',
