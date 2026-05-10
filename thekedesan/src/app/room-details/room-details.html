@@ -1,10 +1,41 @@
 <div class="details-container" *ngIf="room; else notFound">
-  <header class="room-hero" [style.background-image]="'url(' + room.images[0] + ')'">
-    <div class="hero-overlay d-flex align-items-center">
-      <div class="container">
-        <h1 class="display-3 room-name">{{ room.name }}</h1>
+  <header id="roomCarousel" class="carousel slide" data-bs-ride="carousel">
+    <!-- Indicators/Dots -->
+    <div class="carousel-indicators" *ngIf="room.images.length > 1">
+      <button
+        *ngFor="let img of room.images; let i = index"
+        type="button"
+        data-bs-target="#roomCarousel"
+        [attr.data-bs-slide-to]="i"
+        [class.active]="i === 0"
+        aria-current="true">
+      </button>
+    </div>
+
+    <div class="carousel-inner">
+      <div
+        *ngFor="let img of room.images; let i = index"
+        class="carousel-item"
+        [class.active]="i === 0">
+        <div class="room-hero" [style.background-image]="'url(' + img + ')'">
+          <div class="hero-overlay d-flex align-items-center">
+            <div class="container">
+              <h1 class="display-3 room-name">{{ room.name }}</h1>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+
+    <!-- Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#roomCarousel" data-bs-slide="prev" *ngIf="room.images.length > 1">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#roomCarousel" data-bs-slide="next" *ngIf="room.images.length > 1">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
   </header>
 
   <div class="container py-5">
@@ -30,27 +61,23 @@
           </div>
         </section>
 
-        <section class="mb-5" *ngIf="room.features">
-          <h2 class="mb-4">What this room offers</h2>
-          <div class="row">
-            <div class="col-md-6 mb-3" *ngIf="room.features.tech.length">
-              <h5><i class="bi bi-cpu me-2"></i>Technology</h5>
-              <ul class="list-unstyled">
-                <li *ngFor="let tech of room.features.tech">✓ {{ tech }}</li>
-              </ul>
-            </div>
-            <div class="col-md-6 mb-3" *ngIf="room.features.kitchen.length">
-              <h5><i class="bi bi-egg-fried me-2"></i>Kitchen</h5>
-              <ul class="list-unstyled">
-                <li *ngFor="let k of room.features.kitchen">✓ {{ k }}</li>
-              </ul>
-            </div>
-          </div>
-        </section>
+       <section class="mb-5" *ngIf="room.amenities.length">
+  <h2 class="mb-4">What this room offers</h2>
+
+  <div class="row">
+    <!-- This creates a grid where items stack on mobile and spread out on desktop -->
+    <div class="col-6 col-md-4 mb-2" *ngFor="let amenity of room.amenities">
+      <div class="d-flex align-items-center">
+        <i class="bi bi-check-circle-fill me-2 text-success"></i>
+        <span>{{ amenity }}</span>
+      </div>
+    </div>
+  </div>
+</section>
       </div>
 
       <div class="col-lg-4">
-        <div class="booking-card glass p-4 sticky-top" style="top: 100px;">
+        <div class="booking-card glass p-4 sticky-top" style="top: 10px;">
           <h3 class="price-text">R {{ room.price }} <small class="text-muted">/ night</small></h3>
           <hr>
           <button class="btn btn-kedesan w-100 btn-lg mb-3">Book This Room</button>

@@ -127,6 +127,7 @@
   width: 100%;
   position: relative;
   display: flex;
+  padding: 20px 0;
 }
 
 /* The track that actually moves */
@@ -176,6 +177,8 @@
 .amenities {
   text-align: center;
     background-image: url("../../assets/service-bg.png");
+     overflow-x: hidden; /* Critical to prevent horizontal page scroll */
+  width: 100%;
 }
 /* Target the image specifically within the amenity card */
 .amenity-card .card-img-top {
@@ -221,4 +224,157 @@ border: none;
 .amenity-card:hover .room-image {
   /* Scale is kept subtle to avoid blurriness */
   transform: scale(1.05);
+}
+/* --- Button Responsive Tweaks --- */
+.delay-3 {
+  max-width: 100vw;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .btn-kedesan {
+    /* Slightly smaller font/padding for tablets so they fit in a row */
+    padding: 10px 20px !important;
+    font-size: 0.95rem;
+    /* Limit the width so they don't grow too much */
+    min-width: 160px;
+  }
+}
+
+@media (max-width: 767px) {
+  .btn-kedesan {
+    /* Ensure full width on anything smaller than a tablet */
+    width: 100%;
+    max-width: 350px; /* Keeps them from looking like long planks on wide phones */
+    margin: 0 auto;
+  }
+}
+@media (max-width: 576px) {
+  .btn-kedesan {
+    /* Larger padding for mobile touch targets */
+    padding: 10px 18px !important;
+    font-size: 1.1rem;
+    /* Ensure the button doesn't look too "fat" when full width */
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+/* Optional: Smooth out the width transition */
+.btn-kedesan {
+  transition: all 0.3s ease-in-out;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+/* --- Base Card Refinements --- */
+.amenity-card .card-title {
+  transition: font-size 0.3s ease;
+}
+
+/* --- Tablet Adjustments (Portrait & Landscape) --- */
+@media (max-width: 992px) {
+  .amenity-item {
+    flex: 0 0 calc(100% / 4); /* 2 cards visible (List is doubled, so 4) */
+    padding: 0 10px; /* Tighter spacing for tablets */
+  }
+
+  .amenity-card .card-img-top {
+    height: 200px; /* Slightly shorter image for balance */
+  }
+
+  .amenity-card .card-title {
+    font-size: 1.5rem !important; /* Scale down the h3 */
+  }
+
+  .amenity-card .card-body {
+    padding: 1.25rem;
+  }
+}
+
+/* --- Mobile Adjustments --- */
+@media (max-width: 576px) {
+  .amenity-item {
+    flex: 0 0 calc(100% / 2.2); /* 1 card visible + a "peek" of the next one */
+    padding: 0 8px;
+  }
+
+  .amenity-card .card-img-top {
+    height: 180px; /* Compact height for mobile */
+  }
+
+  .amenity-card .card-title {
+    font-size: 1.25rem !important;
+  }
+
+  .amenity-card .card-text {
+    font-size: 0.85rem;
+    line-height: 1.3;
+  }
+
+  .amenity-card .card-body {
+    padding: 1rem;
+    min-height: 120px; /* Ensures consistent height if text varies */
+  }
+
+  /* Slow down the animation on mobile so it's not a blur */
+  .slider-track {
+    animation-duration: 30s;
+  }
+}
+/* --- Base Card Refinements --- */
+.amenity-card .card-title {
+  transition: font-size 0.3s ease;
+}
+
+/* --- Tablet Adjustments (Portrait & Landscape) --- */
+@media (max-width: 992px) {
+  .amenity-item {
+    flex: 0 0 calc(100% / 4); /* 2 cards visible (List is doubled, so 4) */
+    padding: 0 10px; /* Tighter spacing for tablets */
+  }
+
+  .amenity-card .card-img-top {
+    height: 200px; /* Slightly shorter image for balance */
+  }
+
+  .amenity-card .card-title {
+    font-size: 1.5rem !important; /* Scale down the h3 */
+  }
+
+  .amenity-card .card-body {
+    padding: 1.25rem;
+  }
+}
+
+/* --- Mobile Adjustments --- */
+@media (max-width: 576px) {
+  .amenity-item {
+    flex: 0 0 calc(100% / 2.2); /* 1 card visible + a "peek" of the next one */
+    padding: 0 8px;
+  }
+
+  .amenity-card .card-img-top {
+    height: 180px; /* Compact height for mobile */
+  }
+
+  .amenity-card .card-title {
+    font-size: 1.25rem !important;
+  }
+
+  .amenity-card .card-text {
+    font-size: 0.85rem;
+    line-height: 1.3;
+  }
+
+  .amenity-card .card-body {
+    padding: 1rem;
+    min-height: 120px; /* Ensures consistent height if text varies */
+  }
+
+  /* Slow down the animation on mobile so it's not a blur */
+  .slider-track {
+    animation-duration: 30s;
+  }
 }

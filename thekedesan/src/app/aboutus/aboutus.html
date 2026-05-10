@@ -26,16 +26,18 @@
         beautifully furnished accommodations and attention to detail ensure a
         stay filled with cherished memories.
       </p>
-      <div class="text-center delay-3 d-flex justify-content-center gap-3">
-        <a href="/rooms" class="btn btn-kedesan fw-bold">View Rooms</a>
-        <a
-          (click)="openDirections()"
-          class="btn btn-kedesan fw-bold"
-          style="cursor: pointer"
-        >
-          Get Directions
-        </a>
-      </div>
+  <div class="text-center delay-3 d-flex flex-column flex-md-row flex-wrap justify-content-center gap-3 px-4 px-md-0">
+  <a href="/rooms" class="btn btn-kedesan fw-bold w-100 w-md-auto">
+    View Rooms
+  </a>
+  <a
+    (click)="openDirections()"
+    class="btn btn-kedesan fw-bold w-100 w-md-auto"
+    style="cursor: pointer"
+  >
+    Get Directions
+  </a>
+</div>
     </div>
   </div>
 </section>
@@ -108,23 +110,16 @@
 <pre><pre><pre></pre></pre></pre>
 <h2 class="title text-center mb-4 delay-1">Your Comfort, Our Priority!</h2>
 
-<section
-  class="amenities delay-1 active container-fluid py-5 p-0 overflow-hidden"
->
+<section class="amenities reveal delay-1 active container-fluid py-5 p-0 overflow-hidden">
   <div class="row align-items-center g-0">
     <div class="col-md-12">
+
       <div class="slider-container">
         <div class="slider-track">
+
           <div class="amenity-item" *ngFor="let amenity of amenitiesList">
-            <div
-              class="card amenity-card glass h-100"
-              [routerLink]="['/amenities', amenity.id]"
-            >
-              <img
-                [src]="amenity.image"
-                class="card-img-top img-fluid"
-                alt="{{ amenity.name }}"
-              />
+            <div class="card amenity-card glass h-100" [routerLink]="['/amenities', amenity.id]" >
+              <img [src]="amenity.image" class="card-img-top img-fluid" alt="{{ amenity.name }}" />
               <div class="card-body d-flex flex-column justify-content-center">
                 <h5 class="card-title text-white h3">{{ amenity.name }}</h5>
                 <p class="card-text text-white">{{ amenity.subname }}</p>
@@ -134,17 +129,14 @@
 
           <div class="amenity-item" *ngFor="let amenity of amenitiesList">
             <div class="card amenity-card glass h-100">
-              <img
-                [src]="amenity.image"
-                class="card-img-top img-fluid"
-                alt="{{ amenity.name }}"
-              />
+              <img [src]="amenity.image" class="card-img-top img-fluid" alt="{{ amenity.name }}" />
               <div class="card-body d-flex flex-column justify-content-center">
                 <h5 class="card-title text-white h3">{{ amenity.name }}</h5>
                 <p class="card-text text-white">{{ amenity.subname }}</p>
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </div>

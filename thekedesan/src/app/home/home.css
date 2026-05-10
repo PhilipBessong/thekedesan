@@ -268,6 +268,7 @@
   width: 100%;
   position: relative;
   display: flex;
+  padding: 20px 0;
 }
 
 /* The track that actually moves */
@@ -317,6 +318,8 @@
 .amenities {
   text-align: center;
     background-image: url("../../assets/service-bg.png");
+    overflow-x: hidden; /* Critical to prevent horizontal page scroll */
+  width: 100%;
 }
 /* Target the image specifically within the amenity card */
 .amenity-card .card-img-top {
@@ -362,4 +365,59 @@ border: none;
 .amenity-card:hover .room-image {
   /* Scale is kept subtle to avoid blurriness */
   transform: scale(1.05);
+}
+/* --- Base Card Refinements --- */
+.amenity-card .card-title {
+  transition: font-size 0.3s ease;
+}
+
+/* --- Tablet Adjustments (Portrait & Landscape) --- */
+@media (max-width: 992px) {
+  .amenity-item {
+    flex: 0 0 calc(100% / 4); /* 2 cards visible (List is doubled, so 4) */
+    padding: 0 10px; /* Tighter spacing for tablets */
+  }
+
+  .amenity-card .card-img-top {
+    height: 200px; /* Slightly shorter image for balance */
+  }
+
+  .amenity-card .card-title {
+    font-size: 1.5rem !important; /* Scale down the h3 */
+  }
+
+  .amenity-card .card-body {
+    padding: 1.25rem;
+  }
+}
+
+/* --- Mobile Adjustments --- */
+@media (max-width: 576px) {
+  .amenity-item {
+    flex: 0 0 calc(100% / 2.2); /* 1 card visible + a "peek" of the next one */
+    padding: 0 8px;
+  }
+
+  .amenity-card .card-img-top {
+    height: 180px; /* Compact height for mobile */
+  }
+
+  .amenity-card .card-title {
+    font-size: 1.25rem !important;
+  }
+
+  .amenity-card .card-text {
+    font-size: 0.85rem;
+    line-height: 1.3;
+  }
+
+  .amenity-card .card-body {
+    padding: 1rem;
+    min-height: 120px; /* Ensures consistent height if text varies */
+  }
+
+  /* Slow down the animation on mobile so it's not a blur */
+  .slider-track {
+    animation-duration: 30s;
+  }
 }

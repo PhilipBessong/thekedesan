@@ -132,7 +132,7 @@ export class RoomService {
     },
     {
       id: '2',
-      name: 'Fiesta Room',
+      name: 'Feisa Room',
       capacity: 2,
       bedNum: 1,
       bathNum: 1,
@@ -156,7 +156,7 @@ export class RoomService {
         '/assets/fiesta4.jpg',
       ],
       description:
-        'This is an exclusive, spacious, serene room; with a queen, comfortable bed for total occupancy of two (slightly larger than its sister unit). You have a writing desk, ergonomic chair, and high speed internet to support your business activities, or stay in contact with family and friends while on the move. You can follow current affairs, and business news, or just relax with the DSTV Compact bouquet. For your exclusive use, there are heat-and-eat facilities - fridge, microwave, electric kettle; with mugs, cutlery, and plates to go with. There is complimentary tea and coffee, and  prepared water.',
+        'Room Feisa offers a cozy, comfortable experience with a queen-size bed and a reach-in closet. It features a separate bathroom, a sitting area, and a private entrance leading into the garden. Enjoy a bath after a busy day and relax with free toiletries, tea/coffee accessories, and a special daily surprise.',
       features: {
         sleeping: [
           'Queen-size bed with quality linens',
@@ -223,7 +223,7 @@ export class RoomService {
         '/assets/fiesta4.jpg',
       ],
       description:
-        'This air-conditioned, spacious one-bed room apartment consists of a queen bed, an exercise bike, and one ensuite bathroom with a shower. The well-fitted kitchenette comprises a stovetop, a refrigerator, kitchenware and a microwave. There is a washing machine, flat-screen TV with satellite channels, patio, garden views; high speed internet connection and  a dedicated writing desk. There is a barbecue stand on request.',
+        'The Kedesan room is a large, spacious suite with a comfortable king-size bed, an illuminated headboard, a reach-in closet, and a separate bathroom. Open the door to access a beautiful garden, perfect for enjoying the private calm of the day or night. The room includes free toiletries, tea/coffee accessories, and a special daily surprise.',
       features: {
         sleeping: [
           'Queen-size bed with cotton linens',
@@ -268,9 +268,9 @@ export class RoomService {
     {
       id: '4',
       name: 'The Sima',
-      capacity: 8,
-      bedNum: 5,
-      bathNum: 2.5, // 2.5 baths rounded up or kept as 3
+      capacity: 2,
+      bedNum: 1,
+      bathNum: 1, // 2.5 baths rounded up or kept as 3
       price: 950,
       roomtype: 'cook',
       amenities: [
@@ -291,7 +291,7 @@ export class RoomService {
         '/assets/sima4.jpg',
       ],
       description:
-        'The Plum is fully furnished and suitable for families and groups of up to 8 individuals sharing. With a fully equipped kitchen and barbecue facilities, guests are able to prepare their own meals, with the option of enjoying their meals in the dining area or outdoors. The host provides complimentary tea and coffee; and 5L of prepared portable water daily to guests of two or less, and 10L to groups of three or more. Children of three years and below will enjoy a cot to sleep on, and a high chair to eat and bond with parents. The copious wardrobe space allows for the storage of belongings without things getting in the way. The lounge, with sofas and satellite television, allows guests to keep abreast with national and international current affairs and business news, or just to relax with any of the drama or movie channels. Guests traveling for business have a dedicated work area with an ergonomic chair. High speed internet is available in all areas of the property.',
+        'The Sima is an all-in suite with a king bed, a sitting area, and a large private bath. Located on the main floor, it offers a private entrance and a deck with outdoor seating. The room features a kitchenette, tea/coffee accessories, and a special daily surprise.',
       features: {
         sleeping: [
           'Bedroom 1: Queen bed + Cot',
@@ -359,7 +359,7 @@ export class RoomService {
         '/assets/fiesta4.jpg',
       ],
       description:
-        'Tailored specifically for the remote professional, this suite features a specialized focus on productivity. It boasts a premium ergonomic chair and a dual-monitor-ready desk setup alongside the comfort of a king-sized bed. The room is positioned in the quietest corner of the property to ensure undisturbed video calls and deep focus sessions.',
+        'The Eliz is a cozy room with a queen-size bed and a reach-in closet. It features an en-suite bathroom, a separate sitting area, and a patio with a garden view. The room includes a kitchenette, tea/coffee accessories, and a special daily surprise.',
       features: {
         sleeping: [
           'King-size orthopedic bed',
@@ -422,7 +422,7 @@ export class RoomService {
         '/assets/groom3.jpg',
       ],
       description:
-        'A romantic getaway cottage surrounded by the scent of blooming hibiscus. This unit offers a private, gated patio perfect for morning yoga or evening sundowners. The interior is decorated in soft pastels and natural wood, creating a warm, earthy atmosphere for couples seeking a peaceful retreat.',
+        'Room Georges features a comfortable king-size bed with an illuminated headboard, an en-suite bathroom, and a sitting area. Enjoy private access to a beautiful garden where you can relax and soak in nature. The room includes free toiletries, tea/coffee accessories, and a special daily surprise.',
       features: {
         sleeping: [
           'Queen canopy bed',
@@ -485,7 +485,7 @@ export class RoomService {
         '/assets/fiesta4.jpg',
       ],
       description:
-        'A cozy, safe, and affordable option for the single traveler. While compact, the Solo Sanctuary makes clever use of space with built-in storage and a massive window that floods the room with natural Johannesburg sunlight. Perfect for overnight layovers or short business trips.',
+        'Room Theam offers a cozy space with two twin beds and a reach-in closet. Located on the main floor, it features a private entrance, a deck with outdoor seating, and an en-suite bathroom. The room includes a kitchenette, microwave, tea/coffee accessories, and a special daily surprise.',
       features: {
         sleeping: [
           'Comfortable 3/4 bed',
@@ -531,7 +531,7 @@ export class RoomService {
         '/assets/proom3.jpg',
       ],
       description:
-        'Our most architectural unit, the Executive Loft features high ceilings and a mezzanine sleeping area. The downstairs living space is perfect for hosting small meetings or enjoying a gourmet meal. It offers panoramic views of the Pretoria skyline from the upper floor.',
+        'Room Patrick features a queen-size bed with opulent decor. The hand-selected antiques and richly embellished décor add to the comfort of this intimate room. Enjoy a luxury ensuite bathroom with free toiletries, tea/coffee accessories, and a special daily surprise.',
       features: {
         sleeping: [
           'Mezzanine: King-size bed',

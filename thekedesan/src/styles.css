@@ -168,3 +168,62 @@ body {
   transform: scale(1.1) !important;
   filter: brightness(1.1); /* Makes the image "pop" when hovered */
 }
+/* --- Mobile Responsiveness --- */
+
+/* For Tablets and smaller (768px and down) */
+@media (max-width: 768px) {
+  .title {
+    font-size: 3rem; /* Scale down from 4.5rem */
+    padding: 0 15px;
+  }
+
+  .description {
+    font-size: 1rem;
+    max-width: 90%; /* Let it breathe more on mobile */
+    line-height: 1.6;
+  }
+  .glass {
+    /* Slightly less blur on mobile saves battery/performance */
+    backdrop-filter: blur(10px) saturate(160%);
+    -webkit-backdrop-filter: blur(10px) saturate(160%);
+    padding: 20px !important; /* Standardize padding */
+  }
+
+  /* Disable the hover zoom on mobile to prevent "sticky" hover states */
+  .image-wrapper:hover .zoom-img {
+    transform: none !important;
+    filter: none;
+  }
+
+  /* Ensure the glass shine effect isn't too distracting on small screens */
+  .glass::after {
+    animation-duration: 6s; /* Slow it down */
+  }
+}
+
+/* For Phones (576px and down) */
+@media (max-width: 576px) {
+  .title {
+    font-size: 2.2rem; /* Comfortable size for small screens */
+    margin-bottom: 15px;
+  }
+
+  .btn-kedesan {
+    width: 100%; /* Full width buttons are easier to tap on phones */
+    padding: 12px 20px;
+    font-size: 1.1rem;
+  }
+  .reveal {
+    transform: translateY(15px); /* Shorter distance for mobile */
+    transition: all 0.6s ease-out; /* Slightly faster transition */
+  }
+
+  .reveal-left {
+    transform: translateX(0); /* Avoid horizontal shifts on narrow screens to prevent side-scrolling */
+    opacity: 0;
+  }
+
+  .reveal-left.active {
+    opacity: 1;
+  }
+}
