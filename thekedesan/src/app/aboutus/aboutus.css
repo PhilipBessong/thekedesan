@@ -1,7 +1,7 @@
 /* Existing Hero Section Styles */
 .about-section {
   /* Replace with the actual path to your image */
-  background-image: url("../../assets/service-bg.png");
+  background-image: url("../../assets/hero-img.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -15,7 +15,7 @@
   align-items: center;
 }
 .hero-title {
-  font-family: "Lobster", cursive;
+  font-family: "Lora", serif;
   font-size: 5rem;
   color: #ffffff;
   text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.4); /* Adds depth against the bright image */
@@ -73,7 +73,7 @@
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   border-left: none; /* Removes the left white glass border */
-  padding-left: 0;   /* Pushes the image directly against the screen edge */
+  padding-left: 0; /* Pushes the image directly against the screen edge */
 }
 
 /* --- Make the image flush to the left edge --- */
@@ -176,8 +176,8 @@
 }
 .amenities {
   text-align: center;
-    background-image: url("../../assets/service-bg.png");
-     overflow-x: hidden; /* Critical to prevent horizontal page scroll */
+  background-color: var(--kedesan-plum) !important;
+  overflow-x: hidden; /* Critical to prevent horizontal page scroll */
   width: 100%;
 }
 /* Target the image specifically within the amenity card */
@@ -195,10 +195,11 @@
   overflow: hidden; /* Keeps the image corners rounded with the card */
   font-weight: 600;
   border-radius: 25px;
-border: none;
+  border: none;
   /* Smoothly transition the transform and the shadow */
-  transition: transform 0.5s cubic-bezier(0.2, 1, 0.3, 1),
-              box-shadow 0.5s cubic-bezier(0.2, 1, 0.3, 1);
+  transition:
+    transform 0.5s cubic-bezier(0.2, 1, 0.3, 1),
+    box-shadow 0.5s cubic-bezier(0.2, 1, 0.3, 1);
 
   /* Improves performance by telling the browser to expect movement */
   will-change: transform;

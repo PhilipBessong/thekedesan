@@ -82,10 +82,10 @@ export class RoomService {
         'Daily surprise',
       ],
       images: [
-        '/assets/dezy1.jpg',
-        '/assets/dezy2.jpg',
-        '/assets/dezy3.jpg',
-        '/assets/dezy4.jpg',
+        '/assets/_MG_0198.jpg',
+        '/assets/_MG_0175.jpg',
+        '/assets/_MG_0176.jpg',
+        '/assets/_MG_0184.jpg',
       ],
       description:
         'Room Dezy offers a cozy, comfortable retreat with a queen-size bed and a reach-in closet. It features an ensuite bathroom with free toiletries, a separate sitting area, a kitchenette with a microwave, tea/coffee accessories, and a special daily surprise. Enjoy a full view of the garden and plenty of sunlight for a perfect morning coffee.',
@@ -150,10 +150,11 @@ export class RoomService {
         'Daily surprise',
       ],
       images: [
-        '/assets/fiesta1.jpg',
-        '/assets/fiesta2.jpg',
-        '/assets/fiesta3.jpg',
-        '/assets/fiesta4.jpg',
+        '/assets/_MG_0073.jpg',
+        '/assets/_MG_0077.jpg',
+        '/assets/_MG_0072.jpg',
+        '/assets/_MG_0070.jpg',
+        '/assets/_MG_0860.jpg',
       ],
       description:
         'Room Feisa offers a cozy, comfortable experience with a queen-size bed and a reach-in closet. It features a separate bathroom, a sitting area, and a private entrance leading into the garden. Enjoy a bath after a busy day and relax with free toiletries, tea/coffee accessories, and a special daily surprise.',
@@ -217,10 +218,10 @@ export class RoomService {
         'Daily surprise',
       ],
       images: [
-        '/assets/kroom1.jpg',
-        '/assets/kroom2.jpg',
-        '/assets/kroom3.jpg',
-        '/assets/fiesta4.jpg',
+        '/assets/_MG_0729.jpg',
+        '/assets/_MG_0732.jpg',
+        '/assets/_MG_0736.jpg',
+        '/assets/_MG_0737.jpg',
       ],
       description:
         'The Kedesan room is a large, spacious suite with a comfortable king-size bed, an illuminated headboard, a reach-in closet, and a separate bathroom. Open the door to access a beautiful garden, perfect for enjoying the private calm of the day or night. The room includes free toiletries, tea/coffee accessories, and a special daily surprise.',
@@ -285,9 +286,9 @@ export class RoomService {
         'Free toiletries',
       ],
       images: [
-        '/assets/sima1.jpg',
-        '/assets/sima2.jpg',
-        '/assets/sima3.jpg',
+        '/assets/_MG_0421.jpg',
+        '/assets/_MG_0433.jpg',
+        '/assets/_MG_0518.jpg',
         '/assets/sima4.jpg',
       ],
       description:
@@ -416,9 +417,9 @@ export class RoomService {
         'Daily surprise',
       ],
       images: [
-        '/assets/groom1.jpg',
-        '/assets/groom2.jpg',
-        '/assets/fiesta4.jpg',
+        '/assets/_MG_0630.jpg',
+        '/assets/_MG_0638.jpg',
+        '/assets/_MG_0639.jpg',
         '/assets/groom3.jpg',
       ],
       description:
@@ -478,9 +479,9 @@ export class RoomService {
         'Free toiletries',
       ],
       images: [
-        '/assets/theam1.jpg',
-        '/assets/theam2.jpg',
-        '/assets/theam3.jpg',
+        '/assets/_MG_0144.jpg',
+        '/assets/_MG_0149.jpg',
+        '/assets/_MG_0147.jpg',
         '/assets/theam4.jpg',
         '/assets/fiesta4.jpg',
       ],
@@ -525,9 +526,9 @@ export class RoomService {
         'Daily surprise',
       ],
       images: [
-        '/assets/proom1.jpg',
-        '/assets/fiesta4.jpg',
-        '/assets/proom2.jpg',
+        '/assets/_MG_0202.jpg',
+        '/assets/_MG_0203.jpg',
+        '/assets/_MG_0208.jpg',
         '/assets/proom3.jpg',
       ],
       description:
@@ -574,49 +575,54 @@ export class RoomService {
       id: '1',
       name: 'Breakfast Service',
       subname: 'Experience Comfort and Convenience',
-      description: 'At The Kedesan Guest House, we believe that a good day starts with a great breakfast. Our breakfast service offers a variety of delicious options to suit every palate, ensuring you have the energy you need for a productive day. Enjoy a delicious breakfast without leaving the guest house.',
+      description:
+        'At The Kedesan Guest House, we believe that a good day starts with a great breakfast. Our breakfast service offers a variety of delicious options to suit every palate, ensuring you have the energy you need for a productive day. Enjoy a delicious breakfast without leaving the guest house.',
       image: '/assets/breakfast.jpg',
     },
     {
       id: '2',
       name: 'Luxury Shuttle Services',
       subname: 'Experience Comfort and Convenience',
-      description: 'At The Kedesan Guest House, we prioritize your comfort and convenience. Our luxury shuttle service ensures a seamless and relaxing journey to and from the airport. Whether you are arriving or departing, our professional drivers and well-maintained vehicles are here to make your travel experience exceptional.',
+      description:
+        'At The Kedesan Guest House, we prioritize your comfort and convenience. Our luxury shuttle service ensures a seamless and relaxing journey to and from the airport. Whether you are arriving or departing, our professional drivers and well-maintained vehicles are here to make your travel experience exceptional.',
       image: '/assets/drive.jpg',
     },
     {
       id: '3',
       name: 'Laundry Services',
       subname: 'Convenient and Reliable',
-      description: 'At The Kedesan Guest House, we offer convenient and reliable laundry services to ensure that your clothes are always fresh and clean during your stay. Whether you need a quick wash or full-service care, our team is here to assist you.',
+      description:
+        'At The Kedesan Guest House, we offer convenient and reliable laundry services to ensure that your clothes are always fresh and clean during your stay. Whether you need a quick wash or full-service care, our team is here to assist you.',
       image: '/assets/laundry.jpg',
     },
     {
       id: '4',
       name: 'Handicap Accessible Services',
       subname: 'Ensuring Comfort and Convenience for All',
-      description: 'Discover the Accessible Facilities at The Kedesan Huis, where we prioritize comfort and inclusivity for all our guests. At The Kedesan Huis, our accessible features are thoughtfully designed to ensure a seamless and enjoyable experience for everyone. Whether you have specific mobility needs or are seeking a more comfortable stay, our accessible facilities are here to meet your needs.',
+      description:
+        'Discover the Accessible Facilities at The Kedesan Huis, where we prioritize comfort and inclusivity for all our guests. At The Kedesan Huis, our accessible features are thoughtfully designed to ensure a seamless and enjoyable experience for everyone. Whether you have specific mobility needs or are seeking a more comfortable stay, our accessible facilities are here to meet your needs.',
       image: '/assets/handicap.jpg',
     },
     {
       id: '5',
       name: 'Shopping Services',
       subname: 'Convenient and Hassle-Free',
-      description: 'At The Kedesan Guest House, we aim to make your stay as comfortable and convenient as possible. Our grocery shopping service is designed to save you time and effort, ensuring you have all the essentials you need without having to leave the comfort of the guest house.',
+      description:
+        'At The Kedesan Guest House, we aim to make your stay as comfortable and convenient as possible. Our grocery shopping service is designed to save you time and effort, ensuring you have all the essentials you need without having to leave the comfort of the guest house.',
       image: '/assets/shopping.jpg',
     },
     {
       id: '6',
       name: 'Smoking Area',
       subname: 'A Comfortable Space for Smokers',
-      description: 'At The Kedesan Guest House, we understand the needs of all our guests. Our designated outside smoking area offers a comfortable and peaceful space for smokers to relax and unwind.',
+      description:
+        'At The Kedesan Guest House, we understand the needs of all our guests. Our designated outside smoking area offers a comfortable and peaceful space for smokers to relax and unwind.',
       image: '/assets/smoking.jpg',
-    }
+    },
   ];
 
   getRooms(): Observable<Room[]> {
     return of(this.rooms);
-
   }
   getRoomById(id: string): Room | undefined {
     return this.rooms.find((room) => room.id === id);

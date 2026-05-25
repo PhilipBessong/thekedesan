@@ -15,7 +15,7 @@
   align-items: center;
 }
 .hero-title {
-  font-family: "Lobster", cursive;
+ font-family: "Lora", serif;
   font-size: 5rem;
   color: #ffffff;
   text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.4); /* Adds depth against the bright image */
@@ -65,7 +65,7 @@
 }
 
 .room-card .card-title {
-    font-family: "Montserrat", sans-serif;
+     font-family: "Lora", serif;
   color: #ffffff;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
   margin-top: 15px;

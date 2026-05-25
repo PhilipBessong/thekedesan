@@ -8,6 +8,7 @@ import {Faqs} from './faqs/faqs';
 import { Policyterms } from './policyterms/policyterms';
 import { AmenitiesDetails } from './amenities-details/amenities-details';
 import { AppVirtualTour } from './app-virtual-tour/app-virtual-tour';
+import { Ktable } from './ktable/ktable';
 export const routes: Routes = [
   { path: '', component: Home },
   { path: 'rooms', component: Rooms },
@@ -17,6 +18,7 @@ export const routes: Routes = [
   { path: 'aboutus', component: Aboutus },
   { path: 'faqs', component: Faqs },
   { path: 'policy-terms', component: Policyterms },
-  { path: 'virtual-tour', component: AppVirtualTour }
+  { path: 'virtual-tour', component: AppVirtualTour },
+  { path: 'the-kedesan-table', component: Ktable }
 
 ];

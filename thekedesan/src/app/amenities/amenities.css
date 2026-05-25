@@ -1,5 +1,4 @@
 .amenities {
-
   padding-top: 140px; /* Matches the hero section's padding for visual consistency */
 }
 .amenities .title {
@@ -34,7 +33,7 @@
 }
 
 .room-card .card-title {
-    font-family: "Montserrat", sans-serif;
+  font-family: "Lora", serif;
   color: #ffffff;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
   margin-top: 15px;

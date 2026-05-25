@@ -1,6 +1,6 @@
 .hero {
   /* Replace with the actual path to your image */
-  background-image: url("../../assets/hero-img.jpg");
+  background-image: url("../../assets/service-bg.jpg");
 
   /* Standard Hero settings */
   background-size: cover; /* Scales the image to fill the container */
@@ -21,7 +21,7 @@
 }
 /* --- Hero Title --- */
 .hero-title {
-  font-family: "Lobster", cursive;
+  font-family: "Lora", serif;
   font-size: 5rem;
   color: #ffffff;
   text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.4); /* Adds depth against the bright image */
@@ -317,7 +317,7 @@
 }
 .amenities {
   text-align: center;
-    background-image: url("../../assets/service-bg.png");
+    background-color: var(--kedesan-plum) !important;
     overflow-x: hidden; /* Critical to prevent horizontal page scroll */
   width: 100%;
 }
@@ -369,6 +369,7 @@ border: none;
 /* --- Base Card Refinements --- */
 .amenity-card .card-title {
   transition: font-size 0.3s ease;
+   font-family: "Lora", serif;
 }
 
 /* --- Tablet Adjustments (Portrait & Landscape) --- */

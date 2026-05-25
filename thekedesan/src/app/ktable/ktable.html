@@ -1,0 +1,130 @@
+<!-- Hero Section -->
+<section class="restaurant-hero-section d-flex align-items-center justify-content-center">
+  <h1 class="hero-title reveal active">The Kedesan Restaurant</h1>
+</section>
+
+<!-- Introduction Section -->
+<section class="dining-intro reveal delay-1 active container-fluid py-5 p-0 overflow-hidden">
+  <div class="row align-items-center g-0">
+    <div class="col-md-6 mb-4 mb-md-0 pe-md-4">
+      <div class="image-wrapper glass shadow-lg flush-left -left">
+        <div class="zoom-container">
+          <img
+            src="assets/_MG_0819.jpg"
+            alt="Elegant Dining at Kedesan"
+            class="img-fluid abt-img shadow-lg flush-left-img zoom-img"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 px-4 px-lg-5">
+      <h2 class="title text-center mb-4 delay-1">Culinary Excellence</h2>
+      <p class="description text-center mx-auto mb-4 delay-2">
+        Indulge in a symphony of flavors at The <b>Kedesan Restaurant</b>.
+        Our executive chefs have curated a menu that celebrates locally sourced,
+        seasonal ingredients, blending modern gastronomy with classic elegance.
+        Whether you are joining us for a vibrant morning breakfast or an intimate
+        candlelit dinner, our dining room offers a warm, sophisticated ambiance
+        that perfectly complements every bite.
+      </p>
+      <div class="text-center delay-3 d-flex flex-column flex-md-row flex-wrap justify-content-center gap-3 px-4 px-md-0">
+        <a href="/menu" class="btn btn-kedesan fw-bold w-50 w-md-auto">
+          View Menu
+        </a>
+        <a
+          (click)="openReservations()"
+          class="btn btn-kedesan fw-bold w-50 w-md-auto"
+          style="cursor: pointer"
+        >
+          Book a Table
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Signature Dishes / Menu Categories Slider -->
+<section class="menu-highlights text-center py-5">
+  <h2 class="title mb-4 reveal delay-1 active">A Taste of Kedesan</h2>
+  <p class="description mx-auto mb-5 reveal delay-2 active">
+    Explore our carefully crafted culinary offerings, designed to tantalize your palate.
+  </p>
+
+  <div class="amenities reveal delay-3 active container-fluid py-5 p-0 overflow-hidden">
+    <div class="row align-items-center g-0">
+      <div class="col-md-12">
+        <div class="slider-container">
+          <div class="slider-track">
+
+            <!-- First set of items for seamless loop -->
+            <div class="amenity-item" *ngFor="let dish of signatureDishes">
+              <div class="card amenity-card glass h-100" [routerLink]="['/menu', dish.id]">
+                <img [src]="dish.image" class="card-img-top img-fluid room-image" alt="{{ dish.name }}" />
+                <div class="card-body d-flex flex-column justify-content-center">
+                  <h5 class="card-title text-white h3">{{ dish.name }}</h5>
+                  <p class="card-text text-white">{{ dish.description }}</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Second set of items (Duplicated for the infinite scroll effect) -->
+            <div class="amenity-item" *ngFor="let dish of signatureDishes">
+              <div class="card amenity-card glass h-100" [routerLink]="['/menu', dish.id]">
+                <img [src]="dish.image" class="card-img-top img-fluid room-image" alt="{{ dish.name }}" />
+                <div class="card-body d-flex flex-column justify-content-center">
+                  <h5 class="card-title text-white h3">{{ dish.name }}</h5>
+                  <p class="card-text text-white">{{ dish.description }}</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Ambiance & Wine Section -->
+<section class="ambiance reveal delay-1 active container-fluid py-5 p-0 overflow-hidden">
+  <div class="row align-items-center g-0 flex-column-reverse flex-md-row">
+    <div class="col-md-6 px-4 px-lg-5 mt-4 mt-md-0">
+      <h2 class="title text-center mb-4 delay-1">
+        Curated Pairings & Ambiance
+      </h2>
+      <p class="description text-center mx-auto mb-4 delay-2">
+        <b>The Wine Cellar:</b> Elevate your dining experience with a selection from our
+        award-winning wine cellar. Our resident sommelier is always on hand to guide you
+        through our extensive collection of South African vintages and international classics,
+        ensuring the perfect pairing for your meal.
+      </p>
+      <p class="description text-center mx-auto mb-4 delay-2">
+        <b>Private Dining:</b> For those seeking a more intimate setting, The Kedesan
+        offers exclusive private dining rooms. Surrounded by plush interiors and
+        dedicated service, it is the perfect backdrop for celebrations, romantic
+        anniversaries, or high-level business dinners.
+      </p>
+    </div>
+    <div class="col-md-6 pe-md-4">
+      <div class="image-wrapper glass shadow-lg flush-right">
+        <div class="zoom-container" style="border-radius: inherit;">
+          <!-- Carousel for Ambiance -->
+          <div id="ambianceCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="assets/kt-drink.jpg" alt="Wine Cellar" class="img-fluid abt-img shadow-lg zoom-img" />
+              </div>
+              <div class="carousel-item">
+                <img src="assets/kt-spice.jpg" alt="Private Dining Room" class="img-fluid abt-img shadow-lg zoom-img" />
+              </div>
+              <div class="carousel-item">
+                <img src="assets/kt-sweet.jpg" alt="Outdoor Patio Dining" class="img-fluid abt-img shadow-lg zoom-img" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
