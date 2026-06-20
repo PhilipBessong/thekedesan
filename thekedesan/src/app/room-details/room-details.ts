@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { Room, RoomService } from '../service/room-service';
-
+import { Reveal } from '../directives/reveal';
 @Component({
   selector: 'app-room-details',
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, Reveal],
   templateUrl: './room-details.html',
   styleUrl: './room-details.css',
 })

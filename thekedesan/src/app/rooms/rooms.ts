@@ -3,10 +3,10 @@ import { isPlatformBrowser } from '@angular/common';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import {Room,amenities, RoomService } from '../service/room-service';
-
+import { Reveal } from '../directives/reveal';
 @Component({
   selector: 'app-rooms',
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, Reveal],
   templateUrl: './rooms.html',
   styleUrl: './rooms.css',
 })

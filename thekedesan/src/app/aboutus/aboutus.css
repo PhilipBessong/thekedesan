@@ -272,6 +272,7 @@
 /* --- Base Card Refinements --- */
 .amenity-card .card-title {
   transition: font-size 0.3s ease;
+  font-family: "Lora", serif;
 }
 
 /* --- Tablet Adjustments (Portrait & Landscape) --- */

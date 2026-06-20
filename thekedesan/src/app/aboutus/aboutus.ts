@@ -2,9 +2,10 @@ import { Component, OnInit, AfterViewInit, PLATFORM_ID, Inject } from '@angular/
 import { isPlatformBrowser, NgFor } from '@angular/common';
 import {amenities, RoomService } from '../service/room-service';import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { Reveal } from '../directives/reveal';
 @Component({
   selector: 'app-aboutus',
-  imports: [CommonModule,NgFor, RouterModule],
+  imports: [CommonModule,NgFor, RouterModule, Reveal],
   templateUrl: './aboutus.html',
   styleUrl: './aboutus.css',
 })

@@ -2,9 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { amenities, RoomService } from '../service/room-service';
+import { Reveal } from '../directives/reveal';
 @Component({
   selector: 'app-amenities-details',
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, Reveal],
   templateUrl: './amenities-details.html',
   styleUrl: './amenities-details.css',
 })

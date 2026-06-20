@@ -10,7 +10,7 @@ import { AmenitiesDetails } from './amenities-details/amenities-details';
 import { AppVirtualTour } from './app-virtual-tour/app-virtual-tour';
 import { Ktable } from './ktable/ktable';
 export const routes: Routes = [
-  { path: '', component: Home },
+  { path: 'home', component: Home },
   { path: 'rooms', component: Rooms },
   { path: 'rooms/:id', component: RoomDetails },
   { path: 'amenities', component: Amenities },

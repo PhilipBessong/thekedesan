@@ -1,10 +1,13 @@
 <section class="about-section d-flex align-items-center justify-content-center">
-  <h1 class="hero-title active">About The Kedesan Huis</h1>
+  <!-- Starts hidden, fades in nicely on load -->
+  <h1 class="hero-title reveal">About The Kedesan Huis</h1>
 </section>
-<section class="about delay-1 active container-fluid py-5 p-0 overflow-hidden">
+
+<section class="about reveal delay-1 container-fluid py-5 p-0 overflow-hidden">
   <div class="row align-items-center g-0">
     <div class="col-md-6 mb-4 mb-md-0 pe-md-4">
-      <div class="image-wrapper glass shadow-lg flush-left -left">
+      <!-- Fixed typo here from '-left' to 'reveal-left' -->
+      <div class="image-wrapper glass shadow-lg flush-left reveal-left">
         <div class="zoom-container">
           <img
             src="assets/rooms.jpg"
@@ -16,8 +19,9 @@
     </div>
 
     <div class="col-md-6 px-4 px-lg-5">
-      <h2 class="title text-center mb-4 delay-1">About Us</h2>
-      <p class="description text-center mx-auto mb-4 delay-2">
+      <!-- Added reveal class to headings, descriptions, and buttons -->
+      <h2 class="title text-center mb-4 reveal delay-1">About Us</h2>
+      <p class="description text-center mx-auto mb-4 reveal delay-2">
         Welcome to The <b>Kedesan Huis</b>, where comfort and tranquility
         intertwine to offer you an unforgettable stay in the heart of
         Johannesburg. Nestled amidst exquisite perennial gardens, Kedesan
@@ -26,29 +30,30 @@
         beautifully furnished accommodations and attention to detail ensure a
         stay filled with cherished memories.
       </p>
-  <div class="text-center delay-3 d-flex flex-column flex-md-row flex-wrap justify-content-center gap-3 px-4 px-md-0">
-  <a href="/rooms" class="btn btn-kedesan fw-bold w-50 w-md-auto">
-    View Rooms
-  </a>
-  <a
-    (click)="openDirections()"
-    class="btn btn-kedesan fw-bold w-50 w-md-auto"
-    style="cursor: pointer"
-  >
-    Get Directions
-  </a>
-</div>
+      <div class="text-center reveal delay-3 d-flex flex-column flex-md-row flex-wrap justify-content-center gap-3 px-4 px-md-0">
+        <a href="/rooms" class="btn btn-kedesan fw-bold w-50 w-md-auto">
+          View Rooms
+        </a>
+        <a
+          (click)="openDirections()"
+          class="btn btn-kedesan fw-bold w-50 w-md-auto"
+          style="cursor: pointer"
+        >
+          Get Directions
+        </a>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="whyus delay-1 active container-fluid py-5 p-0 overflow-hidden">
+<section class="whyus reveal delay-1 container-fluid py-5 p-0 overflow-hidden">
   <div class="row align-items-center g-0">
-    <h2 class="title text-center mb-4 delay-1">
+    <h2 class="title text-center mb-4 reveal delay-1">
       A Serene Haven in Johannesburg
     </h2>
     <div class="col-md-6 px-4 px-lg-5">
-      <p class="description text-center mx-auto mb-4 delay-2">
+      <!-- Staggered the text blocks slightly (delay-2 and delay-3) for a premium waterfall rhythm -->
+      <p class="description text-center mx-auto mb-4 reveal delay-2">
         <b>Comfort and Elegance:</b> At The Kedesan Huis, we take pride in
         offering accommodations that combine elegance with homely warmth. Each
         room is a sanctuary, blending sophisticated design with comfort. Our
@@ -57,18 +62,19 @@
         bedding to thoughtful amenities, every detail is crafted to provide a
         restful and rejuvenating experience.
       </p>
-      <p class="description text-center mx-auto mb-4 delay-2">
+      <p class="description text-center mx-auto mb-4 reveal delay-3">
         <b>Exceptional Service:</b> The Kedesan Huis is dedicated to delivering
         outstanding service. Our professional staff is committed to ensuring
         your stay is seamless and enjoyable. From the moment you arrive, you
         will experience a warm welcome and attentive care. Our concierge team is
         available to assist with local recommendations, transportation
         arrangements, and any special requests you may have, making sure every
-        aspect of your visit exceeds expectations..
+        aspect of your visit exceeds expectations.
       </p>
     </div>
     <div class="col-md-6 mb-4 mb-md-0 pe-md-4">
-      <div class="image-wrapper glass shadow-lg flush-left -left">
+      <!-- Fixed typo here from '-left' to 'reveal-left' -->
+      <div class="image-wrapper glass shadow-lg flush-left reveal-left">
         <div class="zoom-container">
           <div
             id="aboutCarousel"
@@ -107,10 +113,12 @@
     </div>
   </div>
 </section>
-<pre><pre><pre></pre></pre></pre>
-<h2 class="title text-center mb-4 delay-1">Your Comfort, Our Priority!</h2>
 
-<section class="amenities reveal delay-1 active container-fluid py-5 p-0 overflow-hidden">
+<!-- Removed empty pre tags and hooked reveal behavior to this standalone header -->
+<h2 class="title text-center mb-4 reveal delay-1">Your Comfort, Our Priority!</h2>
+
+<!-- Cleaned up active class -->
+<section class="amenities reveal delay-1 container-fluid py-5 p-0 overflow-hidden">
   <div class="row align-items-center g-0">
     <div class="col-md-12">
 
