@@ -68,41 +68,12 @@
   <div class="amenities reveal delay-3 container-fluid py-5 p-0 overflow-hidden">
     <div class="row align-items-center g-0">
       <div class="col-md-12">
-        <div class="slider-container">
-          <div class="slider-track">
-
-            <!-- First set of items for seamless loop -->
-            <div class="amenity-item" *ngFor="let dish of signatureDishes">
-              <div class="card amenity-card glass h-100" [routerLink]="['/menu', dish.id]">
-                <img
-                  [src]="dish.image"
-                  class="card-img-top img-fluid room-image"
-                  alt="{{ dish.name }}"
-                />
-                <div class="card-body d-flex flex-column justify-content-center">
-                  <h5 class="card-title text-white h3">{{ dish.name }}</h5>
-                  <p class="card-text text-white">{{ dish.description }}</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Second set of items (Duplicated for the infinite scroll effect) -->
-            <div class="amenity-item" *ngFor="let dish of signatureDishes">
-              <div class="card amenity-card glass h-100" [routerLink]="['/menu', dish.id]">
-                <img
-                  [src]="dish.image"
-                  class="card-img-top img-fluid room-image"
-                  alt="{{ dish.name }}"
-                />
-                <div class="card-body d-flex flex-column justify-content-center">
-                  <h5 class="card-title text-white h3">{{ dish.name }}</h5>
-                  <p class="card-text text-white">{{ dish.description }}</p>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
+          <button
+    class="btn btn-kedesan fw-bold reveal delay-3"
+    (click)="navigateToMenu()"
+  >
+    VIEW FULL MENU
+  </button>
       </div>
     </div>
   </div>

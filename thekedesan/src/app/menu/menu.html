@@ -1,0 +1,54 @@
+<section
+  class="menu-container reveal delay-1"
+  [style.background-image]="activeBgImage ? 'url(' + activeBgImage + ')' : 'none'"
+  #revealElement
+>
+  <!-- Header -->
+  <header class="menu-header reveal reveal-left" #revealElement>
+    <h1 class="title">Global Flavors, Local Fire</h1>
+    <p class="description">
+      Discover our street favorites, fire-kissed grills, and signature chef
+      specials crafted to satisfy every craving.
+    </p>
+  </header>
+
+  <!-- Interactive Category Filters -->
+   <div class="swipe-hint d-md-none">
+  <span>Swipe for categories</span> &rarr;
+</div>
+
+  <div class="filters reveal delay-1" #revealElement>
+    <button
+      *ngFor="let category of categories"
+      class="btn-kedesan filter-btn"
+      [class.active-filter]="activeCategory === category"
+      (click)="filterMenu(category)"
+    >
+      {{ category }}
+    </button>
+  </div>
+
+  <!-- Menu Grid -->
+  <div class="menu-grid">
+    <div
+      *ngFor="let item of filteredItems; let i = index"
+      class="menu-item glass reveal"
+      [ngClass]="'delay-' + ((i % 3) + 1)"
+      #revealElement
+    >
+      <div class="image-wrapper zoom-container" *ngIf="item.image">
+        <img [src]="item.image" [alt]="item.name" class="zoom-img" />
+      </div>
+
+      <div class="item-content">
+        <div class="item-header">
+          <h3 class="item-name">{{ item.name }}</h3>
+          <span class="item-price">R{{ item.price }}</span>
+        </div>
+        <p class="item-description" *ngIf="item.description">
+          {{ item.description }}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

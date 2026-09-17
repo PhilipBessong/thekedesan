@@ -73,5 +73,9 @@ export class Ktable {
   openReservations() {
     // Logic to open reservation modal or navigate to booking page
   }
+  navigateToMenu() {
+    // Logic to navigate to the menu page
+    window.location.href = '/menu'; // Adjust the URL as needed
+  }
 }
 

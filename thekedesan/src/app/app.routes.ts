@@ -9,6 +9,7 @@ import { Policyterms } from './policyterms/policyterms';
 import { AmenitiesDetails } from './amenities-details/amenities-details';
 import { AppVirtualTour } from './app-virtual-tour/app-virtual-tour';
 import { Ktable } from './ktable/ktable';
+import {Menu} from './menu/menu';
 export const routes: Routes = [
   {
     path: '',
@@ -61,4 +62,9 @@ export const routes: Routes = [
     title: 'The Kedesan | The Kedesan Table',
     component: Ktable,
   },
+  {
+    path: 'menu',
+    title: 'The Kedesan | Menu',
+    component: Menu,
+  }
 ];
