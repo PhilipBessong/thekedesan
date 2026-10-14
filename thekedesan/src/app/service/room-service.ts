@@ -68,7 +68,7 @@ export class RoomService {
       capacity: 2,
       bedNum: 1,
       bathNum: 1,
-      price: 1200,
+      price: 1150,
       roomtype: 'nocook',
       amenities: [
         'Garden view',
@@ -136,7 +136,7 @@ export class RoomService {
       capacity: 2,
       bedNum: 1,
       bathNum: 1,
-      price: 900,
+      price: 1150,
       roomtype: 'nocook',
       amenities: [
         'Private garden entrance',
@@ -204,7 +204,7 @@ export class RoomService {
       capacity: 2, // Note: Text says 2 adults + baby, mapped to capacity 2 usually
       bedNum: 1,
       bathNum: 1,
-      price: 1200,
+      price: 1400,
       roomtype: 'cook',
       amenities: [
         'Garden Access',
@@ -272,7 +272,7 @@ export class RoomService {
       capacity: 2,
       bedNum: 1,
       bathNum: 1, // 2.5 baths rounded up or kept as 3
-      price: 950,
+      price: 1250,
       roomtype: 'cook',
       amenities: [
         'Deck with outdoor seating',
@@ -340,7 +340,7 @@ export class RoomService {
       capacity: 2,
       bedNum: 1,
       bathNum: 1,
-      price: 860,
+      price: 1150,
       roomtype: 'nocook',
       amenities: [
         'Patio with garden view',
@@ -404,7 +404,7 @@ export class RoomService {
       capacity: 2,
       bedNum: 1,
       bathNum: 1,
-      price: 950,
+      price: 1250,
       roomtype: 'cook',
       amenities: [
         'Private Garden Access',
@@ -465,7 +465,7 @@ export class RoomService {
       capacity: 1,
       bedNum: 1,
       bathNum: 1,
-      price: 860,
+      price: 1250,
       roomtype: 'nocook',
       amenities: [
         'Deck with outdoor seating',
@@ -514,7 +514,7 @@ export class RoomService {
       capacity: 3,
       bedNum: 2,
       bathNum: 2,
-      price: 900,
+      price: 1150,
       roomtype: 'cook',
       amenities: [
         'Air conditioning',
